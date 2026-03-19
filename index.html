@@ -127,7 +127,7 @@
 <body>
 
 <div class="header">
-  <h2>서오 단종 및 할인 재고 조회</h2>
+  <h2>서오 내부용 재고 조회</h2>
   <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
 </div>
 <p>찾으시는 제품 [ ex) CPU, 1515... ] 또는 MLFB를 입력하세요</p>
@@ -217,7 +217,6 @@ const rowsPerPage = 30;
 let currentPage = 1;     
 
 // CSV를 정확하게 분리하는 함수 (따옴표 내 쉼표 무시)
-function parseCSVLine(line) {
 function parseCSVLine(line) {
     const result = [];
     let cur = "";
