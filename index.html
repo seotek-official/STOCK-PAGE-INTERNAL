@@ -216,7 +216,7 @@ let searchKeyword = "";
 const rowsPerPage = 30;  
 let currentPage = 1;     
 
-// 1. CSV 파싱 알고리즘 최적화 (열 밀림 방지 핵심)
+// 1. CSV 파싱 알고리즘 강화 (셀 내 줄바꿈 및 특수문자 완벽 대응)
 function parseCSV(text) {
     const rows = [];
     let curRow = [];
@@ -225,11 +225,11 @@ function parseCSV(text) {
 
     // 데이터 기준일 처리 (#DATE=)
     let baseDate = "-";
-    const lines = text.split(/\r?\n/);
-    if (lines[0] && lines[0].includes("#DATE=")) {
-        const match = lines[0].match(/#DATE=([^",\r\n]+)/);
+    const rawLines = text.split(/\r?\n/);
+    if (rawLines[0] && rawLines[0].includes("#DATE=")) {
+        const match = rawLines[0].match(/#DATE=([^",\r\n]+)/);
         if (match) baseDate = match[1].trim();
-        text = lines.slice(1).join("\n"); // 헤더 제외하고 다시 합침
+        text = rawLines.slice(1).join("\n"); 
     }
     document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
 
@@ -238,25 +238,31 @@ function parseCSV(text) {
         const nextChar = text[i + 1];
 
         if (inQuotes && char === '"' && nextChar === '"') {
-            curCell += '"'; // 따옴표 연속 두개는 따옴표 하나로 처리
+            curCell += '"'; 
             i++;
         } else if (char === '"') {
-            inQuotes = !inQuotes; // 따옴표 상태 반전
+            inQuotes = !inQuotes;
         } else if (char === ',' && !inQuotes) {
-            curRow.push(curCell.trim()); // 쉼표 만나면 셀 확정
+            curRow.push(curCell.trim());
             curCell = "";
         } else if ((char === '\r' || char === '\n') && !inQuotes) {
+            // 따옴표 밖에서 줄바꿈을 만났을 때만 행을 확정
             if (curRow.length > 0 || curCell !== "") {
                 curRow.push(curCell.trim());
-                if (curRow.length >= 5) rows.push(curRow); // 정상적인 열 개수만 추가
+                if (curRow.length >= 5) rows.push(curRow);
                 curRow = [];
                 curCell = "";
             }
         } else {
-            curCell += char;
+            // 셀 내부의 줄바꿈이나 탭 등을 공백으로 치환하여 UI 밀림 방지
+            if (char === '\n' || char === '\r' || char === '\t') {
+                curCell += " "; 
+            } else {
+                curCell += char;
+            }
         }
     }
-    // 마지막 남은 데이터 처리
+    
     if (curRow.length > 0 || curCell !== "") {
         curRow.push(curCell.trim());
         if (curRow.length >= 5) rows.push(curRow);
@@ -264,18 +270,19 @@ function parseCSV(text) {
     return rows;
 }
 
-// 2. 데이터 로드 부분 수정
+// 2. 데이터 로드 및 매핑 (헤더 자동 건너뛰기 강화)
 fetch("stock.csv?v=" + new Date().getTime())
   .then(res => res.arrayBuffer()) 
   .then(buffer => {
     const decoder = new TextDecoder('utf-8'); 
     const text = decoder.decode(buffer);
-    
-    // 파싱 함수 호출
     const parsedData = parseCSV(text);
     
-    // 헤더 열 제외 (보통 첫 줄은 제목이므로 slice(1))
-    const dataRows = parsedData.slice(1);
+    // 첫 줄(헤더)이 'Description' 등의 글자를 포함하는지 확인 후 제거
+    let dataRows = parsedData;
+    if (dataRows.length > 0 && (dataRows[0][0].toLowerCase().includes("desc") || dataRows[0][1].includes("6E"))) {
+        dataRows = dataRows.slice(1);
+    }
 
     allRows = dataRows.map(cols => {
       return {
@@ -285,7 +292,7 @@ fetch("stock.csv?v=" + new Date().getTime())
         location: cols[3] || "",
         qty: cols[4] || ""
       };
-    }).filter(row => row && row.part);
+    }).filter(row => row && row.part && row.part !== "MLFB"); // MLFB 문구 자체 필터링
 
     updateView();
   });
