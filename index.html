@@ -218,14 +218,17 @@ let currentPage = 1;
 
 // CSV를 정확하게 분리하는 함수 (따옴표 내 쉼표 무시)
 function parseCSVLine(line) {
+function parseCSVLine(line) {
     const result = [];
     let cur = "";
     let inQuotes = false;
     for (let i = 0; i < line.length; i++) {
         let char = line[i];
         if (char === '"') {
+            // 따옴표를 만나면 상태 반전 (따옴표 안의 쉼표는 무시하기 위함)
             inQuotes = !inQuotes;
         } else if (char === ',' && !inQuotes) {
+            // 따옴표 밖의 쉼표일 때만 칸 구분
             result.push(cur.trim());
             cur = "";
         } else {
