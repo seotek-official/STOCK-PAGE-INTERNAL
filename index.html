@@ -216,18 +216,23 @@ let searchKeyword = "";
 const rowsPerPage = 30;  
 let currentPage = 1;     
 
-// CSV를 정확하게 분리하는 함수 (따옴표 내 쉼표 무시)
+// CSV를 정확하게 분리하는 함수 (따옴표 처리 및 예외 케이스 보강)
 function parseCSVLine(line) {
     const result = [];
     let cur = "";
     let inQuotes = false;
+    
     for (let i = 0; i < line.length; i++) {
         let char = line[i];
         if (char === '"') {
-            // 따옴표를 만나면 상태 반전 (따옴표 안의 쉼표는 무시하기 위함)
-            inQuotes = !inQuotes;
+            // 따옴표가 연속으로 두 번 나올 경우("") 따옴표 자체로 인식
+            if (inQuotes && line[i+1] === '"') {
+                cur += '"';
+                i++;
+            } else {
+                inQuotes = !inQuotes;
+            }
         } else if (char === ',' && !inQuotes) {
-            // 따옴표 밖의 쉼표일 때만 칸 구분
             result.push(cur.trim());
             cur = "";
         } else {
@@ -235,15 +240,21 @@ function parseCSVLine(line) {
         }
     }
     result.push(cur.trim());
-    return result;
+    
+    // 데이터 앞뒤에 남아있는 따옴표 제거 및 불필요한 공백 정리
+    return result.map(val => val.replace(/^"|"$/g, '').trim());
 }
 
-fetch("stock.csv?v=20260130")
-  .then(res => res.text())
-  .then(text => {
+fetch("stock.csv?v=" + new Date().getTime())
+  .then(res => res.arrayBuffer()) 
+  .then(buffer => {
+    // 엑셀이 UTF-8로 저장되지 않았을 경우를 대비해 'euc-kr' 시도 가능
+    // 만약 UTF-8로 저장했다면 아래 'utf-8' 그대로 사용
+    const decoder = new TextDecoder('utf-8'); 
+    const text = decoder.decode(buffer);
     const lines = text.trim().split(/\r?\n/);
-    let baseDate = "-";
     
+    let baseDate = "-";
     if (lines[0] && lines[0].includes("#DATE=")) {
       const match = lines[0].match(/#DATE=([^",\r\n]+)/);
       if (match) baseDate = match[1].trim();
@@ -251,21 +262,20 @@ fetch("stock.csv?v=20260130")
     }
     document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
 
-    // 헤더 줄 제외 후 데이터 가공
     const dataLines = lines.filter(line => line.trim() !== "").slice(1);
     allRows = dataLines.map(line => {
       const cleanCols = parseCSVLine(line);
-      if (cleanCols.length < 5) return null;
+      // 열이 5개 미만인 데이터는 에러 방지를 위해 걸러냄
+      if (cleanCols.length < 5) return null; 
       return {
         desc: cleanCols[0] || "",
         part: cleanCols[1] || "",
-        type: (cleanCols[2] || ""),
+        type: cleanCols[2] || "",
         location: cleanCols[3] || "",
         qty: cleanCols[4] || ""
       };
     }).filter(row => row && row.part);
 
-    filteredRows = [];
     updateView();
   });
 
