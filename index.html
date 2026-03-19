@@ -216,22 +216,20 @@ let searchKeyword = "";
 const rowsPerPage = 30;  
 let currentPage = 1;     
 
-// 1. CSV 파싱 알고리즘: 줄바꿈 및 따옴표 내 쉼표 완벽 대응
 function parseCSV(text) {
     const rows = [];
     let baseDate = "-";
 
-    // 데이터 기준일 추출 및 본문 분리
-    if (text.startsWith("#DATE=")) {
-        const firstLineEnd = text.indexOf('\n');
-        const firstLine = text.substring(0, firstLineEnd);
-        const match = firstLine.match(/#DATE=([^",\r\n]+)/);
+    // 1. 데이터 기준일 처리 (#DATE=)
+    const lines = text.split(/\r?\n/);
+    if (lines[0] && lines[0].includes("#DATE=")) {
+        const match = lines[0].match(/#DATE=([^",\r\n]+)/);
         if (match) baseDate = match[1].trim();
-        text = text.substring(firstLineEnd + 1);
+        text = lines.slice(1).join("\n"); 
     }
     document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
 
-    // 상태 머신 기반 파서 (가장 정확함)
+    // 2. 고성능 상태 머신 파서 (따옴표 내 쉼표/줄바꿈 완벽 대응)
     let p = 0;
     let row = [];
     let cell = "";
@@ -242,28 +240,29 @@ function parseCSV(text) {
         let next = text[p + 1];
 
         if (inQuotes) {
-            if (c === '"' && next === '"') { // 연속된 따옴표 처리
+            if (c === '"' && next === '"') { // 연속 따옴표 ("") 처리
                 cell += '"';
-                p += 2;
-                continue;
-            }
-            if (c === '"') { // 따옴표 닫힘
+                p++; 
+            } else if (c === '"') { // 따옴표 닫힘
                 inQuotes = false;
             } else {
-                cell += c; // 줄바꿈 포함 모든 문자 수용
+                cell += c; // 따옴표 안의 쉼표나 줄바꿈은 모두 일반 문자로 취급
             }
         } else {
             if (c === '"') { // 따옴표 시작
                 inQuotes = true;
-            } else if (c === ',') { // 셀 구분
+            } else if (c === ',') { // 셀 구분자
                 row.push(cell.trim());
                 cell = "";
-            } else if (c === '\r' || c === '\n') { // 행 구분
-                if (c === '\r' && next === '\n') p++; // CRLF 처리
-                row.push(cell.trim());
-                if (row.length >= 5) rows.push(row);
-                row = [];
-                cell = "";
+            } else if (c === '\n' || c === '\r') { // 줄바꿈 (행 구분)
+                if (c === '\r' && next === '\n') p++; // Windows식 줄바꿈 대응
+                if (row.length > 0 || cell !== "") {
+                    row.push(cell.trim());
+                    // 최소 5개 열이 확보된 경우만 데이터로 인정 (밀림 방지 안전장치)
+                    if (row.length >= 5) rows.push(row);
+                    row = [];
+                    cell = "";
+                }
             } else {
                 cell += c;
             }
@@ -271,8 +270,8 @@ function parseCSV(text) {
         p++;
     }
 
-    // 마지막 남은 행 처리
-    if (cell || row.length > 0) {
+    // 마지막에 남은 데이터 처리
+    if (cell !== "" || row.length > 0) {
         row.push(cell.trim());
         if (row.length >= 5) rows.push(row);
     }
