@@ -71,12 +71,27 @@
     .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
     .mlfb-link { color: #2563eb; text-decoration: underline; cursor: pointer; font-weight: 500; }
 
+    /* 1. PC 상태 (기본 설정): 모바일 리스트를 숨깁니다 */
+    .mobile-list { 
+      display: none; 
+    }
+
+    /* 2. 모바일 상태 (화면 너비 768px 이하): 테이블을 숨기고 리스트를 보여줍니다 */
     @media (max-width: 768px) {
       body { margin: 16px; }
       .header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .logo { height: 60px; margin-top: 0; }
-      table { display: none !important; }
-      .mobile-list { display: flex; flex-direction: column; gap: 12px; }
+
+      /* PC용 테이블 숨기기 */
+      table { display: none !important; } 
+
+      /* 모바일용 카드 리스트 보이기 */
+      .mobile-list { 
+        display: flex !important; 
+        flex-direction: column; 
+        gap: 12px; 
+      }
+  
       .mobile-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; }
       .mobile-desc-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; cursor: pointer; }
       .mobile-desc-content { display: none; font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
