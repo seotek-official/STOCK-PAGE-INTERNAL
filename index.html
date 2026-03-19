@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Inquiry</title>
+  <style>
+    .header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; }
+    input[type="text"] { width: 100%; padding: 14px 16px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
+    .search-box { display: flex; gap: 8px; margin-bottom: 16px; }
+    .search-box input { flex: 1; }
+    .search-box button { padding: 0 20px; font-size: 16px; border: 1px solid #2563eb; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
+    .search-box button:hover { background: #1e4fd8; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .col-desc { width: 50%; } .col-mlfb { width: 30%; } .col-status  { width: 20%; }
+    th { background: #f5f7fa; font-weight: 600; text-align: left; padding: 12px; border-bottom: 2px solid #ddd; }
+    td { padding: 10px 12px; border-bottom: 1px solid #eee; word-break: break-all; }
+    td.desc { max-width: 600px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    td.desc.expanded { white-space: normal; }
+    .logo { height: 100px; object-fit: contain; margin-top: 20px; }  
+    #pagination { margin-top: 20px; text-align: center; }
+    #pagination button { padding: 6px 12px; border: 1px solid #ccc; background: white; cursor: pointer; border-radius: 4px; margin: 0 2px; }
+    #pagination button.active { background: #2c7be5; color: white; font-weight: bold; border-color: #2c7be5; }
+    #pagination button:disabled { cursor: default; opacity: 0.5; }
+    #result-info { margin-top: 12px; font-size: 14px; color: #555; text-align: right; }
+    mark { background-color: #fff3a0; padding: 0 2px; }
+    #contactModal, #priceModal { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; z-index: 1000; }
+
+    #contactModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    .modal-content {
+      background: white; padding: 24px; border-radius: 10px; width: 320px; text-align: center; }
+
+      #priceModal .modal-content {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        width: 340px;
+        text-align: center;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border: 1px solid #f0f0f0;
+        }
+
+      /* 금액 안내 제목 스타일 */
+      #priceModal h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: #333;
+        }
+
+      /* 닫기 버튼 디자인 개선 /
+      #priceModal button {
+        width: 100%; / 버튼을 가득 채우기 /
+        background: #374151; / 차분한 다크 그레이 */
+        padding: 12px;
+        font-weight: 600;
+        margin-top: 20px;
+        }
+      }
+    .modal-content button { margin-top: 16px; padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
+    .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
+    .mlfb-link { color: #2563eb; text-decoration: underline; cursor: pointer; font-weight: 500; }
+
+    @media (max-width: 768px) {
+      body { margin: 16px; }
+      .header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .logo { height: 60px; margin-top: 0; }
+      table { display: none !important; }
+      .mobile-list { display: flex; flex-direction: column; gap: 12px; }
+      .mobile-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; }
+      .mobile-desc-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; cursor: pointer; }
+      .mobile-desc-content { display: none; font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+      .mobile-card.open .mobile-desc-content { display: block; }
+    }
+
+  .empty-box {
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+
+  .empty-box.guide {
+    color: #777;
+    font-size: 14px;
+  }
+
+  .empty-box.no-result {
+    background: #fff5f5;
+    color: #d33;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #ffd6d6;
+  }
+
+  .price-notice {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  .price-contact-link {
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .price-contact-link:hover {
+    color: #1e40af;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h2>서오 단종 및 할인 재고 조회</h2>
+  <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
+</div>
+<p>찾으시는 제품 [ ex) CPU, 1515... ] 또는 MLFB를 입력하세요</p>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="예를들어 CPU, 1515, 6ES7...">
+  <button id="searchBtn" type="button">검색</button><button id="viewAllBtn" type="button">전체 재고 현황</button>
+</div>
+
+<p style="font-size:13px;color:#777;margin-bottom:12px;">
+  ※ 안내: 본 정보는 실제와 다를 수 있으며, 자세한 사항은 
+  <span class="contact-link" onclick="openModal()">문의</span>바랍니다.
+</p>
+
+<div id="contactModal">
+  <div class="modal-content">
+    <h3>문의 안내</h3>
+    <p>아래 연락처로 문의 바랍니다.</p>
+    <p>
+      📞 <a href="tel:0552554360" style="font-weight:600; color:#000; text-decoration:none;">055-255-4360</a><br><br>
+      ✉️ <a href="http://pf.kakao.com/_AtwAX" target="_blank" style="color:#2563eb; font-weight:600; text-decoration:none;">카카오톡 채널 "주식회사 서오"</a><br>
+      <a href="http://pf.kakao.com/_AtwAX/chat" target="_blank" style="font-size:14px; color:#555; text-decoration:underline;">(채팅문의 바로가기 "click")</a>
+    </p>
+    <button onclick="closeModal()">닫기</button>
+  </div>
+</div>
+
+<div id="priceModal">
+  <div class="modal-content">
+    <h3>금액 안내</h3>
+
+    <p id="price-display" style="font-size:18px;font-weight:700; color:#dc2626;"></p>
+
+    <p class="price-notice">
+          정상 제품 기준가이며,<br>
+          제품 상태나 금액 등 자세한 내용은 
+          <a href="javascript:void(0);" 
+               class="price-contact-link"
+               onclick="closePriceModal(); openModal();">
+               문의
+          </a>바랍니다.
+        </p>
+
+    <button onclick="closePriceModal()">닫기</button>
+  </div>
+</div>
+
+<div class="info-row">
+  <div id="update-info" style="font-size:13px;color:#666;">데이터 기준일: -</div>
+
+  <div class="sort-box">
+    <select id="sortSelect">
+      <option value="">정렬 없음</option>
+      <option value="mlfb">MLFB 오름차순</option>
+      <option value="status">수량 많은 순</option>
+    </select>
+  </div>
+
+
+
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 35%;">Description</th>
+      <th style="width: 25%;">MLFB</th>
+      <th style="width: 15%;">단가구분</th>
+      <th style="width: 15%;">보관위치</th>
+      <th style="width: 10%;">수량</th>
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+
+<div id="emptyMessage" class="empty-box"></div>
+
+<div id="result-info"></div>
+<div id="pagination"></div>
+<div id="mobile-list" class="mobile-list"></div>
+
+<script>
+let allRows = [];        
+let filteredRows = [];   
+let searchKeyword = "";  
+const rowsPerPage = 30;  
+let currentPage = 1;     
+
+// CSV를 정확하게 분리하는 함수 (따옴표 내 쉼표 무시)
+function parseCSVLine(line) {
+    const result = [];
+    let cur = "";
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+        let char = line[i];
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            result.push(cur.trim());
+            cur = "";
+        } else {
+            cur += char;
+        }
+    }
+    result.push(cur.trim());
+    return result;
+}
+
+fetch("stock.csv?v=20260130")
+  .then(res => res.text())
+  .then(text => {
+    const lines = text.trim().split(/\r?\n/);
+    let baseDate = "-";
+    
+    if (lines[0] && lines[0].includes("#DATE=")) {
+      const match = lines[0].match(/#DATE=([^",\r\n]+)/);
+      if (match) baseDate = match[1].trim();
+      lines.shift();
+    }
+    document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
+
+    // 헤더 줄 제외 후 데이터 가공
+    const dataLines = lines.filter(line => line.trim() !== "").slice(1);
+    allRows = dataLines.map(line => {
+      const cleanCols = parseCSVLine(line);
+      if (cleanCols.length < 5) return null;
+      return {
+        desc: cleanCols[0] || "",
+        part: cleanCols[1] || "",
+        type: (cleanCols[2] || ""),
+        location: cleanCols[3] || "",
+        qty: cleanCols[4] || ""
+      };
+    }).filter(row => row && row.part);
+
+    filteredRows = [];
+    updateView();
+  });
+
+function updateView() {
+  renderTable();
+  renderPagination();
+  renderResultInfo();
+  renderMobileList();
+}
+
+function renderTable() {
+  const tbody = document.getElementById("table-body");
+  tbody.innerHTML = "";
+  if (filteredRows.length === 0) return;
+
+  const start = (currentPage - 1) * rowsPerPage;
+  const pageRows = filteredRows.slice(start, start + rowsPerPage);
+
+  pageRows.forEach(row => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="desc" onclick="toggleDesc(this)">
+        ${highlight(row.desc)}
+      </td>
+      <td><span class="mlfb-link" onclick="copyMLFB('${row.part}')">${highlight(row.part)}</span></td>
+      <td>${row.type}</td>
+      <td>${row.location}</td>
+      <td style="font-weight:700; color:#2563eb;">${row.qty}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderMobileList() {
+  const container = document.getElementById("mobile-list");
+  container.innerHTML = "";
+  if (filteredRows.length === 0) return;
+
+  const start = (currentPage - 1) * rowsPerPage;
+  const pageRows = filteredRows.slice(start, start + rowsPerPage);
+
+  pageRows.forEach(row => {
+    const div = document.createElement("div");
+    div.className = "mobile-card";
+    const shortDesc = row.desc.length > 40 ? row.desc.slice(0, 40) + "..." : row.desc;
+    div.innerHTML = `
+      <div class="mobile-desc-title" onclick="toggleMobileDesc(this)">
+        ${highlight(shortDesc)}
+      </div>
+      <div class="mobile-desc-content">${highlight(row.desc)}</div>
+      <div style="font-size:13px; color:#666; margin: 5px 0;">MLFB: ${highlight(row.part)}</div>
+      <div style="display:flex; justify-content:space-between; font-size:13px; background:#f9fafb; padding:8px; border-radius:6px;">
+        <span>구분: ${row.type}</span>
+        <span>위치: <strong>${row.location}</strong></span>
+        <span>수량: <strong style="color:#2563eb;">${row.qty}</strong></span>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function renderPagination() {
+  const container = document.getElementById("pagination");
+  container.innerHTML = "";
+  if (filteredRows.length === 0) return;
+
+  const pageCount = Math.ceil(filteredRows.length / rowsPerPage);
+  
+  const firstBtn = document.createElement("button");
+  firstBtn.textContent = "<< 처음";
+  firstBtn.disabled = currentPage === 1;
+  firstBtn.onclick = () => { currentPage = 1; updateView(); };
+  container.appendChild(firstBtn);
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "< 이전";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => { currentPage--; updateView(); };
+  container.appendChild(prevBtn);
+
+  let start = Math.max(1, currentPage - 2);
+  let end = Math.min(pageCount, start + 4);
+  if (end - start < 4) start = Math.max(1, end - 4);
+
+  for (let i = start; i <= end; i++) {
+    if (i < 1) continue;
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === currentPage) btn.classList.add("active");
+    btn.onclick = () => { currentPage = i; updateView(); };
+    container.appendChild(btn);
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "다음 >";
+  nextBtn.disabled = currentPage === pageCount;
+  nextBtn.onclick = () => { currentPage++; updateView(); };
+  container.appendChild(nextBtn);
+
+  const lastBtn = document.createElement("button");
+  lastBtn.textContent = "끝 >>";
+  lastBtn.disabled = currentPage === pageCount;
+  lastBtn.onclick = () => { currentPage = pageCount; updateView(); };
+  container.appendChild(lastBtn);
+}
+
+document.getElementById("searchBtn").addEventListener("click", () => {
+  const value = document.getElementById("search").value.trim().toLowerCase();
+  searchKeyword = value;
+  if (value.length < 2) { alert("검색어는 2글자 이상 입력해주세요."); return; }
+  
+  const map = new Map(); // 이 줄이 반드시 있어야 합니다!
+
+  allRows.forEach(row => {
+    if (
+      normalize(row.desc).includes(normalize(value)) ||
+      normalize(row.part).includes(normalize(value))
+    ) {
+      const key = row.part;
+      if (!map.has(key)) {
+        map.set(key, row);
+      }
+    }
+  });
+
+  filteredRows = Array.from(map.values());
+  currentPage = 1;
+  applySort();
+  updateView();
+});
+
+document.getElementById("search").addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("searchBtn").click(); });
+document.getElementById("sortSelect").addEventListener("change", () => { applySort(); currentPage = 1; updateView(); });
+
+function applySort() {
+  const sortType = document.getElementById("sortSelect").value;
+  if (sortType === "mlfb") {
+    filteredRows.sort((a, b) => a.part.localeCompare(b.part));
+  } else if (sortType === "status") {
+    // 수량(qty)이 큰 순서대로 정렬 (숫자로 변환하여 비교)
+    filteredRows.sort((a, b) => {
+      const qtyA = parseInt(a.qty.toString().replace(/[^0-9]/g, '')) || 0;
+      const qtyB = parseInt(b.qty.toString().replace(/[^0-9]/g, '')) || 0;
+      return qtyB - qtyA;
+    });
+  }
+}
+
+function renderResultInfo() {
+    const info = document.getElementById("result-info");
+    const emptyBox = document.getElementById("emptyMessage");
+
+    // 결과가 없는 경우
+    if (filteredRows.length === 0) {
+
+      info.textContent = ""; // 기존 텍스트 제거
+      emptyBox.style.display = "block";
+
+      if (!searchKeyword) {
+        emptyBox.className = "empty-box guide";
+        emptyBox.innerHTML = "🔎 검색어를 입력해주세요.";
+      } else {
+        emptyBox.className = "empty-box no-result";
+        emptyBox.innerHTML = `
+          ❗ 검색 결과가 없습니다.<br>
+          <span style="font-size:13px;font-weight:400;">
+            다른 키워드로 다시 시도해보세요.
+          </span>
+        `;
+      }
+
+      return;
+    }
+
+    // 결과가 있는 경우
+    emptyBox.style.display = "none";
+    info.textContent = `총 ${filteredRows.length}건 검색됨 (${currentPage}페이지)`;
+  }
+
+function highlight(text) { if (!searchKeyword) return text; const regex = new RegExp(`(${searchKeyword})`, "gi"); return text.replace(regex, "<mark>$1</mark>"); }
+function normalize(text) { return text.toLowerCase().replace(/[\s-]/g, ""); }
+function toggleDesc(td) { td.classList.toggle("expanded"); }
+function toggleMobileDesc(el) { el.parentElement.classList.toggle("open"); }
+function copyMLFB(text) { navigator.clipboard.writeText(text); alert("복사되었습니다: " + text); }
+function openModal() { document.getElementById("contactModal").style.display = "flex"; }
+function closeModal() { document.getElementById("contactModal").style.display = "none"; }
+function openPriceModal(price, originalPrice) {
+  // [안전장치] 값이 아예 없거나 공백이면 모달을 띄우지 않고 종료합니다.
+  if (!price || price.toString().trim() === "") return;
+
+  // 1. 숫자가 하나라도 들어있는지 확인
+  const hasNumber = /\d/.test(price); 
+  
+  let displayPrice = "";
+
+  if (hasNumber) {
+    // 숫자가 있으면 기존처럼 콤마 찍어서 출력
+    displayPrice = Number(price.toString().replace(/[^0-9]/g, '')).toLocaleString() + "원";
+  } else {
+    // 숫자가 없는 특수 문구(또는 깨진 글자)가 들어있다면 기계적으로 이 문구 출력
+    displayPrice = "단가 협의 가능"; 
+  }
+
+  // 기존가 처리 (숫자일 때만 작동하도록 보강)
+  const cleanOriginal = originalPrice ? originalPrice.toString().replace(/[^0-9]/g, '') : "";
+
+  let html = "";
+  if (cleanOriginal && cleanOriginal !== "") {
+    html = `
+      <div style="padding: 10px 0; margin-bottom: 10px; border-bottom: 1px solid #eee;">
+        <div style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-bottom: 4px;">
+          기존가: ${Number(cleanOriginal).toLocaleString()}원
+        </div>
+        <div style="color: #ef4444; font-size: 24px; font-weight: 800;">
+          <span style="font-size: 16px; vertical-align: middle;">할인가</span> 
+          ${displayPrice}
+        </div>
+      </div>
+    `;
+  } else {
+    html = `
+      <div style="padding: 20px 0; margin-bottom: 10px;">
+        <div style="color: #111827; font-size: 24px; font-weight: 800;">
+          ${displayPrice}
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById("price-display").innerHTML = html;
+  document.getElementById("priceModal").style.display = "flex";
+}
+
+function closePriceModal() { document.getElementById("priceModal").style.display = "none"; }
+window.onclick = function(event) { if (event.target.id === "contactModal" || event.target.id === "priceModal") { closeModal(); closePriceModal(); } }
+
+document.getElementById("viewAllBtn").addEventListener("click", () => {
+  const map = new Map();
+
+  allRows.forEach(row => {
+    const key = row.part;
+    // 중복된 MLFB가 있으면 처음 하나만 남깁니다.
+    if (!map.has(key)) {
+      map.set(key, row);
+    }
+  });
+
+  filteredRows = Array.from(map.values());
+  
+  searchKeyword = ""; 
+  currentPage = 1;
+  applySort();
+  updateView();
+});
+
+
+
+</script>
+</body>
+</html>
