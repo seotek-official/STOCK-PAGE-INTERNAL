@@ -216,40 +216,66 @@ let searchKeyword = "";
 const rowsPerPage = 30;  
 let currentPage = 1;     
 
-// 1. CSV 파싱 알고리즘 강화 (셀 내 줄바꿈 및 특수문자 완벽 대응)
-// 1. CSV 파싱 알고리즘: 큰따옴표 내 쉼표 무시 (RegEx 활용)
+// 1. CSV 파싱 알고리즘: 줄바꿈 및 따옴표 내 쉼표 완벽 대응
 function parseCSV(text) {
     const rows = [];
-    
-    // 데이터 기준일 처리 (#DATE=)
     let baseDate = "-";
-    const lines = text.split(/\r?\n/);
-    if (lines[0] && lines[0].includes("#DATE=")) {
-        const match = lines[0].match(/#DATE=([^",\r\n]+)/);
+
+    // 데이터 기준일 추출 및 본문 분리
+    if (text.startsWith("#DATE=")) {
+        const firstLineEnd = text.indexOf('\n');
+        const firstLine = text.substring(0, firstLineEnd);
+        const match = firstLine.match(/#DATE=([^",\r\n]+)/);
         if (match) baseDate = match[1].trim();
-        text = lines.slice(1).join("\n"); 
+        text = text.substring(firstLineEnd + 1);
     }
     document.getElementById("update-info").textContent = `데이터 기준일: ${baseDate}`;
 
-    // 정규식 설명: 쉼표를 기준으로 나누되, 큰따옴표("")로 둘러싸인 쉼표는 제외함
-    const re_valid = /,(?=(?:(?:[^"]*"){2})*[^"]*$)/g;
-    
-    const rawRows = text.split(/\r?\n/);
-    
-    rawRows.forEach(line => {
-        if (!line.trim()) return;
+    // 상태 머신 기반 파서 (가장 정확함)
+    let p = 0;
+    let row = [];
+    let cell = "";
+    let inQuotes = false;
 
-        // 정규식으로 분할
-        let cols = line.split(re_valid).map(cell => {
-            // 앞뒤 공백 및 불필요한 큰따옴표 제거, 내부의 연속된 따옴표("")는 하나(")로 복구
-            return cell.trim().replace(/^"|"$/g, '').replace(/""/g, '"');
-        });
+    while (p < text.length) {
+        let c = text[p];
+        let next = text[p + 1];
 
-        // 정상적인 데이터(열 5개)만 추출
-        if (cols.length >= 5) {
-            rows.push(cols);
+        if (inQuotes) {
+            if (c === '"' && next === '"') { // 연속된 따옴표 처리
+                cell += '"';
+                p += 2;
+                continue;
+            }
+            if (c === '"') { // 따옴표 닫힘
+                inQuotes = false;
+            } else {
+                cell += c; // 줄바꿈 포함 모든 문자 수용
+            }
+        } else {
+            if (c === '"') { // 따옴표 시작
+                inQuotes = true;
+            } else if (c === ',') { // 셀 구분
+                row.push(cell.trim());
+                cell = "";
+            } else if (c === '\r' || c === '\n') { // 행 구분
+                if (c === '\r' && next === '\n') p++; // CRLF 처리
+                row.push(cell.trim());
+                if (row.length >= 5) rows.push(row);
+                row = [];
+                cell = "";
+            } else {
+                cell += c;
+            }
         }
-    });
+        p++;
+    }
+
+    // 마지막 남은 행 처리
+    if (cell || row.length > 0) {
+        row.push(cell.trim());
+        if (row.length >= 5) rows.push(row);
+    }
 
     return rows;
 }
