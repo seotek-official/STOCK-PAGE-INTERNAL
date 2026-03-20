@@ -225,6 +225,18 @@
 <div id="mobile-list" class="mobile-list"></div>
 
 <script>
+// 페이지 로드 시 바로 실행
+(function() {
+    const password = prompt("비밀번호를 입력하세요.");
+    const correctPassword = "39773977"; // 여기에 사용할 비밀번호를 적으세요.
+
+    if (password !== correctPassword) {
+        alert("비밀번호가 틀렸습니다. 접근이 거부되었습니다.");
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:100px;'>🔒 접근 권한이 없습니다.</h1>";
+        window.stop(); // 페이지 로딩 중단
+    }
+})();
+
 let allRows = [];        
 let filteredRows = [];   
 let searchKeyword = "";  
