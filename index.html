@@ -142,35 +142,38 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #2563eb;
-  color: white;
+  width: 55px; /* 크기 조절 */
+  height: 55px;
+  background-color: #333; /* 이미지와 비슷한 어두운 회색 */
+  color: white; /* 흰색 글씨 */
   border: none;
-  border-radius: 50%;
+  border-radius: 12px; /* 둥근 모서리 효과 */
   cursor: pointer;
-  display: none; /* 처음에는 숨김 */
+  display: none; /* 스크롤 전에는 숨김 */
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  font-weight: bold;
-  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 은은한 그림자 */
+  text-align: center;
+  font-family: Arial, sans-serif;
   transition: opacity 0.3s, background-color 0.3s;
+  padding: 0;
+  line-height: 1.2; /* 글자 줄 간격 */
 }
 
+/* 마우스 올렸을 때 살짝 더 진해지게 */
 #back-to-top:hover {
-  background-color: #1e40af;
+  background-color: #222;
 }
 
-/* 모바일에서는 버튼이 너무 크지 않게 조절 */
+/* 모바일 화면에서는 버튼이 너무 크지 않게 조절 */
 @media (max-width: 768px) {
   #back-to-top {
     bottom: 20px;
     right: 20px;
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
   }
 }
-
   </style>
 </head>
 <body>
