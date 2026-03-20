@@ -137,6 +137,40 @@
   }
 
 
+/* TOP 버튼 스타일 */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* 처음에는 숨김 */
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  font-size: 14px;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+#back-to-top:hover {
+  background-color: #1e40af;
+}
+
+/* 모바일에서는 버튼이 너무 크지 않게 조절 */
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -223,6 +257,8 @@
 <div id="result-info"></div>
 <div id="pagination"></div>
 <div id="mobile-list" class="mobile-list"></div>
+
+<button id="back-to-top" title="위로 가기">TOP</button>
 
 <script>
 // 페이지 로드 시 바로 실행
@@ -585,6 +621,25 @@ document.getElementById("viewAllBtn").addEventListener("click", () => {
   updateView();
 });
 
+// TOP 버튼 관련 로직
+const topBtn = document.getElementById("back-to-top");
+
+// 사용자가 스크롤을 내리면 버튼을 보여줌
+window.addEventListener('scroll', function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+// 클릭하면 맨 위로 부드럽게 이동
+topBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
 
 
 </script>
