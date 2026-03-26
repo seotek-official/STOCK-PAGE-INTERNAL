@@ -479,23 +479,20 @@ function renderPagination() {
 }
 
 document.getElementById("searchBtn").addEventListener("click", () => {
-  const value = document.getElementById("search").value.trim().toLowerCase();
-  searchKeyword = value;
-  if (value.length < 2) { alert("검색어는 2글자 이상 입력해주세요."); return; }
-  
-  const map = new Map(); // 이 줄이 반드시 있어야 합니다!
+    const value = document.getElementById("search").value.trim().toLowerCase();
+    searchKeyword = value;
+    if (value.length < 2) { alert("검색어는 2글자 이상 입력해주세요."); return; }
+    
+    // [수정] Map을 사용하지 않고, 조건에 맞는 모든 행을 가져옵니다.
+    filteredRows = allRows.filter(row => 
+        normalize(row.desc).includes(normalize(value)) || 
+        normalize(row.part).includes(normalize(value))
+    );
 
-  allRows.forEach(row => {
-    if (
-      normalize(row.desc).includes(normalize(value)) ||
-      normalize(row.part).includes(normalize(value))
-    ) {
-      const key = row.part;
-      if (!map.has(key)) {
-        map.set(key, row);
-      }
-    }
-  });
+    currentPage = 1;
+    applySort();
+    updateView();
+});
 
   filteredRows = Array.from(map.values());
   currentPage = 1;
@@ -609,15 +606,14 @@ function closePriceModal() { document.getElementById("priceModal").style.display
 window.onclick = function(event) { if (event.target.id === "contactModal" || event.target.id === "priceModal") { closeModal(); closePriceModal(); } }
 
 document.getElementById("viewAllBtn").addEventListener("click", () => {
-  const map = new Map();
-
-  allRows.forEach(row => {
-    const key = row.part;
-    // 중복된 MLFB가 있으면 처음 하나만 남깁니다.
-    if (!map.has(key)) {
-      map.set(key, row);
-    }
-  });
+    // [수정] 모든 데이터를 그대로 복사해서 가져옵니다.
+    filteredRows = [...allRows]; 
+    
+    searchKeyword = ""; 
+    currentPage = 1;
+    applySort();
+    updateView();
+});
 
   filteredRows = Array.from(map.values());
   
