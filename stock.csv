@@ -1,11 +1,11 @@
-﻿"""#DATE=2026-06-29 11:30:00 AM""",,,,
+﻿"""#DATE=2026-07-06 10:30:00 AM""",,,,
 Description,MLFB,type,location,qty
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,36
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,12
 "SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,LG,A1,264
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2D, BU type A0, push-in terminals, without aux. terminals, new load group, WxH: 15x 117 mm
 ",6ES7193-6BP00-0DA0,LG,A2,207
-"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,449
+"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,429
 "SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with 1.5 MB work memory for program and 4.5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 6 ns bit performance, SIMATIC Memory Card required *** approvals and certificates according to entry 109817466 at to be considered! ***",6ES7515-2FN03-0AB0,LG,A3,0
 "*** spare part *** SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with work memory 750 KB for program and 3 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 30 ns bit performance, SIMATIC Memory Card required",6ES7515-2FM02-0AB0,LG,A3,3
 "SIMATIC S7, MEMORY CARD FOR S7-1X00 CPU, 3,3 V FLASH, 256 MBYTE",6ES7954-8LL03-0AA0,LG,A3,1
@@ -122,7 +122,7 @@ SINAMICS BRAKING RESISTOR R=75Ohm P_rated=375W P_max=7500W/12s/5% duty STANDALON
 "SIMATIC S7-1200, CPU 1214C, compact CPU, DC/DC/relay, onboard I/O: 14 DI 24 V DC; 10 DO relay 2 A; 2 AI 0-10 V DC, power supply: DC 20.4-28.8 V DC, program/data memory 150 KB",6ES7214-1HG40-0XB0,일반,E1,6
 "SIMATIC S7-1200, Digital I/O SM 1223, 8 DI/8 DO, 8 DI 24 V DC, Sink/Source, 8 DO, transistor 0.5 A",6ES7223-1BH32-0XB0,일반,E1,0
 "SIMATIC S7-1200, Digital I/O SM 1223, 16 DI/16 DO, 16 DI 24 V DC, Sink/Source, 16 DO, transistor 0.5 A",6ES7223-1BL32-0XB0,일반,E1,0
-"SIMATIC S7-1200, Digital I/O SM 1223, 16 DI/16 DO, 16 DI 24 V DC, Sink/Source, 16 DO, relay 2 A",6ES7223-1PL32-0XB0,일반,E1,13
+"SIMATIC S7-1200, Digital I/O SM 1223, 16 DI/16 DO, 16 DI 24 V DC, Sink/Source, 16 DO, relay 2 A",6ES7223-1PL32-0XB0,일반,E1,12
 "SIMATIC S7-1200, Analog input, SM 1231, 4 AI, +/-10 V, +/-5 V, +/-2.5 V, or 0-20 mA/4-20 mA, 12 bit+sign (13 bit ADC)",6ES7231-4HD32-0XB0,일반,E1,0
 "SIMATIC S7-1200, Analog output, SM 1232, 4 AO, +/-10 V, 14-bit resolution, or 0-20 mA/4-20 mA, 13-bit resolution",6ES7232-4HD32-0XB0,일반,E1,26
 "SIMATIC S7-1200, Communication module CM 1241, RS422/485",6ES7241-1CH32-0XB0,일반,E1,0
@@ -292,7 +292,7 @@ SINAMICS / SIMOTION TERMINAL BOARD TB30 FOR CONTROL UNIT CU320-X AND SIMOTION D4
 "SIMATIC ET 200SP, BusAdapter BA 2xRJ45, 2 RJ45 sockets",6ES7193-6AR00-0AA0,일반,F2,6
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B/T, BU type A1, Push-in terminals, without AUX terminals",6ES7193-6BP00-0BA1,일반,F2,0
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A10+2B, BU type A0, Push-in terminals, with 10 AUX terminals, bridged to the left, WxH: 15 mmx141 mm",6ES7193-6BP20-0BA0,일반,F2,4
-"SIMATIC ET 200SP, BaseUnit BU20-P12+A0+4B, BU type B1, Packing unit: 1 unit, push-in terminals, without auxiliary terminals, bridged to the left, WxH: 20 mm x 117 mm",6ES7193-6BP20-0BB1,일반,F2,0
+"SIMATIC ET 200SP, BaseUnit BU20-P12+A0+4B, BU type B1, Packing unit: 1 unit, push-in terminals, without auxiliary terminals, bridged to the left, WxH: 20 mm x 117 mm",6ES7193-6BP20-0BB1,일반,F2,1
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A10+2D, BU type A0, Push-in terminals, with 10 AUX terminals, New load group, WxH: 15 mmx141 mm",6ES7193-6BP20-0DA0,일반,F2,11
 "SIMATIC ET 200SP, BaseUnit BU20-P6+A2+4D, BU type C0, Push-in terminals, with 2 AUX terminals, New load group, WxH: 20 mmx117 mm",6ES7193-6BP20-0DC0,일반,F2,9
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+12B/T, BU type A1, Push-in terminals, with 2x 5 add-on terminals, bridged to the left, WxH: 15 mm x 141 mm, with temperature acquisition",6ES7193-6BP40-0BA1,일반,F2,9
@@ -424,7 +424,7 @@ SITOP PSU300S 40 A stabilized power supply input: 400-500 V 3 AC output: 24 V DC
 "SIMATIC S7-1200, spare part I/O terminal block tin-coated CPU 1214C/1215C on output side (4 units with 12 screws each)",6ES7292-1AM30-0XA0,일반,H3,1
 "SIMATIC S7-1200, spare part I/O terminal block tin-coated CPU 1214C/1215C on input side (4 units with 20 screws each)",6ES7292-1AV30-0XA0,일반,H3,1
 "SIMATIC S7-1200, spare part, I/O terminal block tin-coated, coded, for digital signal module 8CH/16CH, (4 units with 7 screws each)",6ES7292-1AG40-0XA0,일반,H3,1
-SINAMICS TERMINAL MODULE TM31 ADD ON BOARD FOR SINAMICS WITH DIGITAL AND ANALOG IN- AND OUTPUTS IP20 FOR CAP RAIL MOUNTING,6SL3055-0AA00-3AA1,이레,I1,2
+SINAMICS TERMINAL MODULE TM31 ADD ON BOARD FOR SINAMICS WITH DIGITAL AND ANALOG IN- AND OUTPUTS IP20 FOR CAP RAIL MOUNTING,6SL3055-0AA00-3AA1,이레,I1,1
 "SIMATIC SD indoor card 32 GB, secure digital card, indoor use, can be used with TIA V16 or higher, scope of supply: 1 memory card",6AV6881-0AP40-0AA0,슬로박,I1,0
 "SIMOTICS S-1FL6 Operating voltage 3AC 400 V Pn=0.75 kW; Nn=3000 rpm M0=3.5 Nm; MN=2.39 Nm Shaft height 45 mm,",1FL6044-1AF61-2LA1,일반,I1,1
 "connection cable PN for KTPX00(F) Mobile (PROFINET) length: 10 m, scope of supply: 1 connection cable",6AV2181-5AF10-0AX0,북미,I1,4
@@ -444,8 +444,8 @@ SINAMICS TERMINAL MODULE TM31 ADD ON BOARD FOR SINAMICS WITH DIGITAL AND ANALOG 
 SINAMICS G120 Basic Operator Panel (BOP-2),6SL3255-0AA00-4CA1,화인,I1,0
 "SIMATIC S7-1200, CPU 1215C, compact CPU, AC/DC/relay, 2 PROFINET ports, onboard I/O: 14 DI 24 V DC; 10 DO relay 2 A, 2 AI 0-10 V DC, 2 AO 0-20 mA DC, power supply: AC 85-264 V AC at 47-63 Hz, program/data memory 200 KB",6ES7215-1BG40-0XB0,로버스텍,I1,2
 "SIMATIC S7-1200, CPU 1215C, compact CPU, DC/DC/relay, 2 PROFINET ports, onboard I/O: 14 DI 24 V DC; 10 DO relay 2 A, 2 AI 0-10 V DC, 2 AO 0-20 mA DC, power supply: DC 20.4-28.8 V DC, program/data memory 200 KB",6ES7215-1HG40-0XB0 ,로버스텍,I1,5
-"SIMATIC S7-1200, Digital input SM 1221, 16 DI, 24 V DC, Sink/Source",6ES7221-1BH32-0XB0,로버스텍,I1,9
-"SIMATIC S7-1200, Digital output SM 1222, 16 DO, 24 V DC, transistor 0.5 A",6ES7222-1BH32-0XB0,로버스텍,I1,9
+"SIMATIC S7-1200, Digital input SM 1221, 16 DI, 24 V DC, Sink/Source",6ES7221-1BH32-0XB0,로버스텍,I1,8
+"SIMATIC S7-1200, Digital output SM 1222, 16 DO, 24 V DC, transistor 0.5 A",6ES7222-1BH32-0XB0,로버스텍,I1,10
 "SIMATIC S7-1200, Analog input, SM 1231, 8 AI, +/-10 V, +/-5 V, +/-2.5 V, or 0-20 mA/4-20 mA, 12 bit+sign or (13 bit ADC)",6ES7231-4HF32-0XB0,로버스텍,I1,19
 "SIMATIC S7-1200, Communication module CM 1241, RS422/485, 9-pole D-sub (socket) supports Freeport",6ES7241-1CH32-0XB0,로버스텍,I1,3
 "SIMATIC S7-1200, Digital output SM 1222, 8 DO, relay 2 A",6ES7222-1HF32-0XB0,로버스텍,I1,0
@@ -508,7 +508,7 @@ Signal cable pre-assembled type: 6FX8002-2DC20 DRIVE-CLiQ with 24 V Connector RJ
 Power cable sold by the meter type: 6FX8008-1BB31 4x 4 C MOTION-CONNECT 800PLUS trailable UL/CSA DESINA Dmax=12.3 mm Type of delivery: to 99 m ring from 100 m disposable drum Length (m)= 0 + 0 + 5 + 0,6FX8008-1BB31-1AF0,일반,L2,1
 "Brake cable pre-assembled 6FX3002-5BK02-1CA0 2x0.75, for motor S-1FL6 LI with V90 230 V MOTION-CONNECT 300 UL/CSA Dmax=6.4 mm Length (m)=20 m",6FX3002-5BK02-1CA0,일반,L3,1
 "Signal cable pre-assembled type: 6FX2002-1DC00 (SINAMICS Drive CLiQ) Connector IP20/IP20, without 24 V Length (m)= 0 + 0 + 8 + 0",6FX2002-1DC00-1AJ0,일반,L3,2
-"Power cable sold by the meter type: 6FX5008-1BB11 4x 1.5 C UL/CSA, DESINA MOTION-CONNECT 500 Type of delivery: Ring Dmax=8.4 mm, Length (m)=50",6FX5008-1BB11-1FA0,일반,L3,30
+"Power cable sold by the meter type: 6FX5008-1BB11 4x 1.5 C UL/CSA, DESINA MOTION-CONNECT 500 Type of delivery: Ring Dmax=8.4 mm, Length (m)=50",6FX5008-1BB11-1FA0,일반,L3,20
 "M8 power connector, FEMALE contact insert, 4-pole",6ES7194-2AC00-0AA0,일반,L3,4
 "bus cable for ET connection M8, assembled on both ends with 2x M8 connectors, 4-pole, shielded length 0.3 m",6ES7194-2LH03-0AA0,일반,L3,20
 "Power cable M8, both ends assembled with M8 connector and M8 socket, 4-pole, length 0.3 m",6ES7194-2LH03-1AA0,일반,L3,20
