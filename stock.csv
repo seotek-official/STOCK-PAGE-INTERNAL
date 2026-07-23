@@ -1,11 +1,11 @@
-﻿"""#DATE=2026-07-13 09:00:00 AM""",,,,,
+﻿"""#DATE=2026-07-23 14:00:00 PM""",,,,,
 Description,MLFB,type,location,qty,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,36,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,12,
 "SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,LG,A1,264,
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2D, BU type A0, push-in terminals, without aux. terminals, new load group, WxH: 15x 117 mm
 ",6ES7193-6BP00-0DA0,LG,A2,193,
-"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,351,
+"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,315,
 "SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with 1.5 MB work memory for program and 4.5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 6 ns bit performance, SIMATIC Memory Card required *** approvals and certificates according to entry 109817466 at to be considered! ***",6ES7515-2FN03-0AB0,LG,A3,0,
 "*** spare part *** SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with work memory 750 KB for program and 3 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 30 ns bit performance, SIMATIC Memory Card required",6ES7515-2FM02-0AB0,LG,A3,2,
 "SIMATIC S7, MEMORY CARD FOR S7-1X00 CPU, 3,3 V FLASH, 256 MBYTE",6ES7954-8LL03-0AA0,LG,A3,1,
@@ -899,7 +899,7 @@ Identification labels 20 x 7 mm pastel-turquoise consists of 340 labels on frame
 "SIMATIC S7-300, FM 354 SUBMODULE FOR POSITIONING WITH SERVOMOTORS, MODULE EXCHANGE W/O PG, PREQUISITE STEP7 V3.1 INCL. CONFIG. PACKAGE ON CD",6ES7354-1AH01-0AE0,일반,NO.8,3,
 "S7-300 connecting cable for 64-channel modules, Length 2.5 m 2 units per packing unit",6ES7392-4BC50-0AA0,일반,NO.8,4,A- 1
 "*** spare part *** SIMATIC S7-200, PC/PPI cable MM multimaster, for connection of S7-200 to serial PC interface, supports Freeport and GSM modems",6ES7901-3CB30-0XA0,일반,NO.8,1,
-,20102110712110290001,일반,NO.8,4,
+,2.01021E+19,일반,NO.8,4,
 ,PLC아날로그용 부품,일반,NO.8,1,Ax 1
 "*** spare part *** SIMATIC DP, interface module IM 151-1 Standard for ET 200S; incl. termination module data volume of 244 bytes each for inputs and outputs; max. 63 I/O modules PROFIBUS DP V0 and V1 up to 2 m width can be connected; bus connection via 9-pin D-sub",6ES7151-1AA06-0AB0,일반,NO.9,1,Ax 1
 "*** spare part *** SIMATIC DP, interface module IM 151-3 PN ST for ET 200S transfer rate 100 Mbps max. 63 power, electronic or motor starter modules up to 2 m width can be connected; 2x bus connections via RJ45 incl. termination module",6ES7151-3AA23-0AB0,일반,NO.9,5,Bx 5
