@@ -1,4 +1,4 @@
-﻿"""#DATE=2026-07-23 14:00:00 PM""",,,,,
+﻿"""#DATE=2026-07-27 14:00:00 PM""",,,,,
 Description,MLFB,type,location,qty,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,36,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,12,
@@ -323,7 +323,7 @@ SINAMICS / SIMOTION TERMINAL BOARD TB30 FOR CONTROL UNIT CU320-X AND SIMOTION D4
 "SIMATIC ET 200SP, Analog input module, AI 8XI 2-/4-wire Basic",6ES7134-6GF00-0AA1,일반,F2,2,
 "SIMATIC ET 200SP, Analog input module, AI 2x U/I 2-.4-wire High Feat., suitable for BU type A0, A1, Color code CC05, channel diagnostics, 16 bit, +/-0.1%",6ES7134-6HB00-0CA1,일반,F2,14,
 "SIMATIC ET 200SP, Analog input module, AI 2x U/I 2-.4-wire High Speed, suitable for BU type A0, A1, Color code CC00, channel diagnostics, 16 bit, +/-0.3%",6ES7134-6HB00-0DA1,일반,F2,6,
-"SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XU/I 2-WIRE STANDARD, PACKING UNIT: 1 PIECE, FITS TO BU-TYPE A0, A1, COLOR CODE CC03, MODULE DIAGNOSIS, 16BIT, +/-0,3%",6ES7134-6HD01-0BA1,일반,F2,5,
+"SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XU/I 2-WIRE STANDARD, PACKING UNIT: 1 PIECE, FITS TO BU-TYPE A0, A1, COLOR CODE CC03, MODULE DIAGNOSIS, 16BIT, +/-0,3%",6ES7134-6HD01-0BA1,일반,F2,4,
 "SIMATIC ET 200SP, Analog input module, AI 4xRTD/TC High Feature, suitable for BU type A0, A1, Color code CC00, channel diagnostics, 16 bit, +/-0.1%, 2-/3-/4-wire",6ES7134-6JD00-0CA1,일반,F2,3,
 "SIMATIC ET 200SP, Analog input module, AI 8xRTD/TC 2-wire High Feature suitable for BU type A0, A1, Color code CC00, channel diagnostics, 16 bit, +/-0.1%",6ES7134-6JF00-0CA1,일반,F2,3,
 "SIMATIC ET 200SP, Analog output module, AQ 2xU Standard, Pack quantity: 1 unit, suitable for BU type A0, A1, Color code CC00, Module diagnostics, 16 bit",6ES7135-6FB00-0BA1,일반,F2,4,
@@ -349,7 +349,7 @@ SINAMICS / SIMOTION TERMINAL BOARD TB30 FOR CONTROL UNIT CU320-X AND SIMOTION D4
 "SIMATIC ET 200SP, BaseUnit BU20-P12+A0+4B, BU type B1, Packing unit: 1 unit, push-in terminals, without auxiliary terminals, bridged to the left, WxH: 20 mm x 117 mm",6ES7193-6BP20-0BB1,일반,F2,6,
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A10+2D, BU type A0, Push-in terminals, with 10 AUX terminals, New load group, WxH: 15 mmx141 mm",6ES7193-6BP20-0DA0,일반,F2,11,A- 1
 "SIMATIC ET 200SP, BaseUnit BU20-P6+A2+4D, BU type C0, Push-in terminals, with 2 AUX terminals, New load group, WxH: 20 mmx117 mm",6ES7193-6BP20-0DC0,일반,F2,6,Ax 1
-"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+12B/T, BU type A1, Push-in terminals, with 2x 5 add-on terminals, bridged to the left, WxH: 15 mm x 141 mm, with temperature acquisition",6ES7193-6BP40-0BA1,일반,F2,9,
+"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+12B/T, BU type A1, Push-in terminals, with 2x 5 add-on terminals, bridged to the left, WxH: 15 mm x 141 mm, with temperature acquisition",6ES7193-6BP40-0BA1,일반,F2,8,
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+12D/T, BU type A1, Push-in terminals, with 2x 5 add-on terminals, New load group, WxH: 15 mm x 141 mm, with temperature acquisition",6ES7193-6BP40-0DA1,일반,F2,2,
 "SIMATIC DP, spare part 5 E coding keys type F for ET 200SP modules F-DI, F-DQ, F-PM-E; 5 units per packing unit",6ES7193-6EF00-1AA0,일반,F2,34,"A- 2, Ax 27"
 "SIMATIC DP, CM PROFIBUS DP for ET 200SP CPU module with PROFIBUS DP interface (9-pole D-sub socket) DP master for 125 DP slaves DP slave,",6ES7545-5DA00-0AB0,일반,F2,1,Ax 1
@@ -899,7 +899,7 @@ Identification labels 20 x 7 mm pastel-turquoise consists of 340 labels on frame
 "SIMATIC S7-300, FM 354 SUBMODULE FOR POSITIONING WITH SERVOMOTORS, MODULE EXCHANGE W/O PG, PREQUISITE STEP7 V3.1 INCL. CONFIG. PACKAGE ON CD",6ES7354-1AH01-0AE0,일반,NO.8,3,
 "S7-300 connecting cable for 64-channel modules, Length 2.5 m 2 units per packing unit",6ES7392-4BC50-0AA0,일반,NO.8,4,A- 1
 "*** spare part *** SIMATIC S7-200, PC/PPI cable MM multimaster, for connection of S7-200 to serial PC interface, supports Freeport and GSM modems",6ES7901-3CB30-0XA0,일반,NO.8,1,
-,2.01021E+19,일반,NO.8,4,
+,20102110712110290001,일반,NO.8,4,
 ,PLC아날로그용 부품,일반,NO.8,1,Ax 1
 "*** spare part *** SIMATIC DP, interface module IM 151-1 Standard for ET 200S; incl. termination module data volume of 244 bytes each for inputs and outputs; max. 63 I/O modules PROFIBUS DP V0 and V1 up to 2 m width can be connected; bus connection via 9-pin D-sub",6ES7151-1AA06-0AB0,일반,NO.9,1,Ax 1
 "*** spare part *** SIMATIC DP, interface module IM 151-3 PN ST for ET 200S transfer rate 100 Mbps max. 63 power, electronic or motor starter modules up to 2 m width can be connected; 2x bus connections via RJ45 incl. termination module",6ES7151-3AA23-0AB0,일반,NO.9,5,Bx 5
@@ -1050,11 +1050,11 @@ MICROMASTER 4 Braking resistor 200-240 V 180R 1000W PK 50W cont. 230x 72x 43.5 m
 "SINUMERIK 808D, Extended T PPU 161.2 horizontal with current software version English layout",6FC5370-2AT02-0AA0,일반,라1,7,
 "SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 15 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size D 240x207x173 (WxHxD)",6SL3210-5BE31-5UV0,일반,라1,2,
 "SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 7.5 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size D 240x207x173 (WxHxD)",6SL3210-5BE27-5UV0,일반,라2,10,
-"SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 0.75 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size A 90x150x146 (WxH",6SL3210-5BE17-5UV0,일반,라2,5,
+"SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 0.75 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size A 90x150x146 (WxH",6SL3210-5BE17-5UV0,일반,라2,0,
 "SINAMICS V90, with PROFINET Input voltage: 200-240 V 1/3-phase AC -15%/+10% 2.5/1.5 A 45-66 Output voltage: 0 – Input voltage: 1.2 A 0-330 Hz Motor: 0.1 kW Degree of protection: IP20 Size A, 45x170x170 (WxHxD)",6SL3210-5FB10-1UF2,일반,라2,1,
 "SINAMICS V90, Input voltage: 200-240 V 1/3-phase AC -15%/+10% 2.5/1.5 A 45-66 Output voltage: 0 – Input voltage: 1.2 A 0-330 Hz Motor: 0.1 kW Degree of protection: IP20 Size A, 45x170x170 (WxHxD)",6SL3210-5FB10-1UA2,일반,라2,1,
 "SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 3 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size B 140x160x165 (WxHxD)",6SL3210-5BE23-0UV0,일반,라3,5,
-"SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 0.55 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size A 90x150x146 (WxH",6SL3210-5BE15-5UV0,일반,라3,2,
+"SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 0.55 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size A 90x150x146 (WxH",6SL3210-5BE15-5UV0,일반,라3,0,
 "SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 4 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size B 140x160x165 (WxHxD)",6SL3210-5BE24-0UV0,일반,라3,8,
 "SINAMICS V20 380-480 V 3AC -15%/+10%  47-6 Rated power 2.2 kW with 150% overload for 60 sec. unfiltered I/O interface: 4 DI, 2 DQ, 2 AI, 1 AO Fieldbus: USS/Modbus RTU with built-in BOP Degree of protection IP20/UL open Size: Size A 90x166x146 (WxH",6SL3210-5BE22-2UV0,일반,라3,5,
 "SINAMICS V20 380-480 V 3 AC -15/+10% 47-63Hz rated power 0.37 kW with 150% overload for 60 sec. unfiltered I/O: 4 DI, 2 DO,2 AI, 1 AQ fieldbus: USS/MODBUS RTU with built-in BOP protection: IP20/ UL open size: A 90x150x146 (WxHxD)",6SL3210-5BE13-7UV0,일반,라4,1,
