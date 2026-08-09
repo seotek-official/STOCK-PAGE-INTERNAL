@@ -1,4 +1,4 @@
-﻿"""#DATE=2026-07-31 18:00:00 PM""",,,,,
+﻿"""#DATE=2026-08-10 08:00:00 AM""",,,,,
 Description,MLFB,type,location,qty,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,36,
 "Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,12,
@@ -147,7 +147,7 @@ SINAMICS BRAKING RESISTOR R=75Ohm P_rated=375W P_max=7500W/12s/5% duty STANDALON
 "SIMATIC DP, electronic module for ET 200SP, F-DI 8x 24 V DC HF, 15 mm width, up to PLe (ISO 13849-1)/ SIL3 (IEC 61508)",6ES7136-6BA01-0CA0,슬로박,D1,0,
 "SINAMICS G120C rated power 3AC380-480V +10/-20% 47-63Hz low overload: 1,1kW at 150% 3s, 110% 57s, 100% 240s high overload: 0,75kW at 200% 3s, 150% 57s, 100% 240s integrated filter class A external 24V I/O interface: 6DI, 2DO,1AI,1AO, 1Mot_t Safe Torque Off integrated Fieldbus: PROFINET-PN Protection: IP20/ UL OPEN TYPE Size: FSAA 173X73X160(HXWXD)
 ",6SL3210-1KE13-2AF2,화인,D1,5,
-"SINAMICS G120C rated power 3AC380-480V +10/-20% 47-63Hz low overload: 0,55kW at 150% 3s, 110% 57s, 100% 240s high overload: 0,37kW at 200% 3s, 150% 57s, 100% 240s integrated filter class A external 24V I/O interface: 6DI, 2DO,1AI,1AO, 1Mot_t Safe Torque Off integrated Fieldbus: PROFINET-PN Protection: IP20/ UL OPEN TYPE Size: FSAA 173X73X160(HXWXD)",6SL3210-1KE11-8AF2,화인,D1,2,
+"SINAMICS G120C rated power 3AC380-480V +10/-20% 47-63Hz low overload: 0,55kW at 150% 3s, 110% 57s, 100% 240s high overload: 0,37kW at 200% 3s, 150% 57s, 100% 240s integrated filter class A external 24V I/O interface: 6DI, 2DO,1AI,1AO, 1Mot_t Safe Torque Off integrated Fieldbus: PROFINET-PN Protection: IP20/ UL OPEN TYPE Size: FSAA 173X73X160(HXWXD)",6SL3210-1KE11-8AF2,화인,D1,1,
 "SINAMICS G120C rated power 3AC380-480V +10/-20% 47-63Hz low overload: 2,2kW at 150% 3s, 110% 57s, 100% 240s high overload: 1,5kW at 200% 3s, 150% 57s, 100% 240s integrated filter class A external 24V I/O interface: 6DI, 2DO,1AI,1AO, 1Mot_t Safe Torque Off integrated Fieldbus: PROFINET-PN Protection: IP20/ UL OPEN TYPE Size: FSAA 173X73X160(HXWXD)",6SL3210-1KE15-8AF2,화인,D1,2,
 SINAMICS G120 Basic Operator Panel (BOP-2),6SL3255-0AA00-4CA1,화인,D1,0,
 "SIMATIC S7-1200, Analog input, SM 1231, 4 AI, +/-10 V, +/-5 V, +/-2.5 V, or 0-20 mA/4-20 mA, 12 bit+sign (13 bit ADC)",6ES7231-4HD32-0XB0,로버스텍,D2,10,
@@ -403,8 +403,8 @@ SINAMICS S110 CONTROL UNIT CU305 PN WITH PROFINET INTERFACE WITHOUT MEMORY CARD,
 SINAMICS TERMINAL MODULE TM31 ADD ON BOARD FOR SINAMICS WITH DIGITAL AND ANALOG IN- AND OUTPUTS IP20 FOR CAP RAIL MOUNTING,6SL3055-0AA00-3AA1,일반,G2,1,Ax 1
 "SINAMICS G120 CONTROL UNIT CU240E-2 DP E-TYPE SAFETY INTEGRATED STO PROFIBUS DP 6DI, 3DO, 2AI, 2AO, MAX 1F-DI PTC/KTY INTERFACE USB- AND SD/MMC-INTERFACE PROTECTION IP20 AMBIENT TEMP 0 TO +50 DEG C WITHOUT POWER MODULE AND PANEL",6SL3244-0BB12-1PA1,일반,G2,1,
 SINAMICS VOLTAGE SENSING MODULE VSM10,6SL3053-0AA00-3AA1,일반,G3,0,
-"signal connector, RJ45 type: 6FX2003-0DM67 DRIVE-CLiQ IP67 metal version",6FX2003-0DM67,일반,G3,65,
-"signal connector, RJ45 IP20 type: 6FX2003-0DC20",6FX2003-0DC20,일반,G3,103,
+"signal connector, RJ45 type: 6FX2003-0DM67 DRIVE-CLiQ IP67 metal version",6FX2003-0DM67,일반,G3,62,
+"signal connector, RJ45 IP20 type: 6FX2003-0DC20",6FX2003-0DC20,일반,G3,100,
 SINAMICS V20 brake module 380 V-480 V 3AC/200 V - 240 V Duty cycle from 5% to 100% Size: 90x150x88 (WxHxD),6SL3201-2AD20-8VA0,일반,G3,1,
 "SINAMICS G120C rated power 3AC380-480V +10/-20% 47-63Hz low overload: 7,5kW ",6SL3210-1KE21-7AF1,일반,G3,0,
 SINAMICS G120 CONTROL UNIT CU250S-2 PN,6SL3246-0BA22-1FA0,일반,G3,0,
@@ -511,7 +511,7 @@ Power cable sold by the meter type: 6FX8008-1BB31 4x 4 C MOTION-CONNECT 800PLUS 
 "connection cable PN for Mobile Panels (PROFINET), length: 10 m, scope of supply: 1 connection cable",6XV1440-4BN10,일반,L3,1,
 "Signal cable pre-assembled type: 6FX5002-2DC10 (SINAMICS DRIVE-CLiQ) plug IP20/IP67, with 24 V MOTION-CONNECT 500 length (m)= +0 +10 +5 +0",6FX5002-2DC10-1BF0,일반,L3,0,
 "Brake cable pre-assembled 6FX3002-5BK02-1CA0 2x0.75, for motor S-1FL6 LI with V90 230 V MOTION-CONNECT 300 UL/CSA Dmax=6.4 mm Length (m)=20 m",6FX3002-5BK02-1CA0,일반,L3,1,
-"Signal cable pre-assembled type: 6FX2002-1DC00 (SINAMICS Drive CLiQ) Connector IP20/IP20, without 24 V Length (m)= 0 + 0 + 8 + 0",6FX2002-1DC00-1AJ0,일반,L3,2,
+"Signal cable pre-assembled type: 6FX2002-1DC00 (SINAMICS Drive CLiQ) Connector IP20/IP20, without 24 V Length (m)= 0 + 0 + 8 + 0",6FX2002-1DC00-1AJ0,일반,L3,0,
 "Power cable sold by the meter type: 6FX5008-1BB11 4x 1.5 C UL/CSA, DESINA MOTION-CONNECT 500 Type of delivery: Ring Dmax=8.4 mm, Length (m)=50",6FX5008-1BB11-1FA0,일반,L3,20,20M
 "M8 power connector, FEMALE contact insert, 4-pole",6ES7194-2AC00-0AA0,일반,L3,4,
 "bus cable for ET connection M8, assembled on both ends with 2x M8 connectors, 4-pole, shielded length 0.3 m",6ES7194-2LH03-0AA0,일반,L3,20,
@@ -601,7 +601,7 @@ PROFIBUS FC RS 485 plug 180 PROFIBUS connector,6GK1500-0FC10,일반,M3,0,
 IE FC M12 plug PRO 4x 2; M12 plug-in connector,6GK1901-0DB50-6AA0,일반,M3,1,
 Industrial Ethernet FastConnect M12 plug PRO 2x2 M12 plug-in connector ,6GK1901-0DB20-6AA8 ,일반,M3,0,
 Industrial Ethernet FastConnect M12 plug PRO 2x2 M12 plug-in connector,6GK1901-0DB20-6AA0,일반,M3,3,
-"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB10-2AA0,일반,M3,12,3EA 단위에서 개별로
+"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB10-2AA0,일반,M3,10,3EA 단위에서 개별로
 "Industrial Ethernet FastConnect RJ45 plug 180 4x 2, RJ45 plug-in connector (10/100/1000 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 4x 2 (AWG24); 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB11-2AA0,일반,M3,71,
 "Industrial Ethernet FastConnect RJ45 plug 90 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP Cable 2x 2; 90° cable outlet 1 pack=50 units.",6GK1901-1BB20-2AA0,일반,M3,5,
 "Industrial Ethernet FastConnect RJ45 plug 145 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 145° cable outlet 1 pack = 1 unit.",6GK1901-1BB30-0AA0,일반,M3,7,
