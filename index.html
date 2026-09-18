@@ -174,13 +174,173 @@
     border-radius: 10px;
   }
 }
+
+/* =========================
+   다크모드 버튼
+========================= */
+
+.dark-mode-btn {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.dark-mode-btn:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================
+   다크모드 전체 스타일
+========================= */
+
+body.dark-mode {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* 제목 및 일반 텍스트 */
+body.dark-mode h2,
+body.dark-mode p {
+  color: #f3f4f6;
+}
+
+/* 검색창 */
+body.dark-mode input[type="text"] {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.dark-mode input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+/* 검색 버튼 */
+body.dark-mode .search-box button {
+  background: #2563eb;
+  border-color: #3b82f6;
+}
+
+/* 전체 재고 버튼 */
+body.dark-mode #viewAllBtn {
+  background: #374151;
+  border-color: #6b7280;
+  color: #f3f4f6;
+}
+
+/* 테이블 */
+body.dark-mode table {
+  color: #f3f4f6;
+}
+
+body.dark-mode th {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-bottom-color: #4b5563;
+}
+
+body.dark-mode td {
+  border-bottom-color: #374151;
+}
+
+/* 정렬 선택 */
+body.dark-mode select {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+/* 데이터 기준일 / 결과 정보 */
+body.dark-mode #update-info,
+body.dark-mode #result-info {
+  color: #9ca3af !important;
+}
+
+/* 페이지네이션 */
+body.dark-mode #pagination button {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.dark-mode #pagination button:hover {
+  background: #374151;
+}
+
+body.dark-mode #pagination button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* 모바일 카드 */
+body.dark-mode .mobile-card {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+/* 모바일 카드 내부 정보 영역 */
+body.dark-mode .mobile-card div[style*="background:#f9fafb"] {
+  background: #374151 !important;
+}
+
+/* 검색 결과 없음 */
+body.dark-mode .empty-box.guide {
+  color: #9ca3af;
+}
+
+body.dark-mode .empty-box.no-result {
+  background: #3f1d1d;
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+
+/* 문의 링크 */
+body.dark-mode .contact-link,
+body.dark-mode .price-contact-link {
+  color: #60a5fa;
+}
+
+/* 모달 */
+body.dark-mode .modal-content {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #374151;
+}
+
+body.dark-mode .modal-content h3 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .price-notice {
+  color: #9ca3af;
+}
+
+/* 다크모드 버튼 자체 */
+body.dark-mode .dark-mode-btn {
+  background: #374151;
+  border-color: #6b7280;
+}
   </style>
 </head>
 <body>
 
 <div class="header">
   <h2>서오 내부용 재고 조회</h2>
-  <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
+
+  <div style="display:flex; align-items:center; gap:12px;">
+    <button id="darkModeBtn" type="button" class="dark-mode-btn">다크모드🌙</button>
+    <img src="company_logo_v2.jpg" alt="company Logo" class="logo">
+  </div>
 </div>
 <p>찾으시는 제품 [ ex) CPU, 1515... ] 또는 MLFB를 입력하세요</p>
 
@@ -614,6 +774,31 @@ topBtn.addEventListener('click', function() {
         top: 0,
         behavior: 'smooth'
     });
+});
+
+// =========================
+// 다크모드 기능
+// =========================
+
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+// 저장된 다크모드 설정 불러오기
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    darkModeBtn.textContent = "☀️";
+}
+
+// 버튼 클릭
+darkModeBtn.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("darkMode", "enabled");
+        darkModeBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("darkMode", "disabled");
+        darkModeBtn.textContent = "🌙";
+    }
 });
 
 
