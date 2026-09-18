@@ -387,20 +387,24 @@ body.dark-mode .dark-mode-btn {
   </div>
 </div>
 
-<div class="info-row" style="display: flex; align-items: center; gap: 15px; flex-wrap: nowrap;"> 
+<div class="info-row" style="display: flex; align-items: center; justify-content: space-between; width: 100%;"> 
+  <!-- 왼쪽: 데이터 기준일 -->
   <div id="update-info" style="font-size:13px;color:#666;">데이터 기준일: -</div> 
  
-  <label style="display: flex; align-items: center; gap: 4px;"> 
-      <input type="checkbox" id="hideZeroQty"> 
-      재고 0개 숨기기 
-  </label> 
- 
-  <div class="sort-box"> 
-    <select id="sortSelect"> 
-      <option value="">정렬 없음</option> 
-      <option value="mlfb">MLFB 오름차순</option> 
-      <option value="status">수량 많은 순</option> 
-    </select> 
+  <!-- 오른쪽: 재고 0개 숨기기 + 정렬 박스 -->
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <label style="display: flex; align-items: center; gap: 4px; cursor: pointer;"> 
+        <input type="checkbox" id="hideZeroQty"> 
+        재고 0개 숨기기 
+    </label> 
+   
+    <div class="sort-box"> 
+      <select id="sortSelect"> 
+        <option value="">정렬 없음</option> 
+        <option value="mlfb">MLFB 오름차순</option> 
+        <option value="status">수량 많은 순</option> 
+      </select> 
+    </div> 
   </div>
 </div>
 
