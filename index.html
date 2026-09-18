@@ -59,13 +59,13 @@
 
       /* 닫기 버튼 디자인 개선 /
       #priceModal button {
-        width: 100%; / 버튼을 가득 채우기 /
-        background: #374151; / 차분한 다크 그레이 */
+        width: 100%;
+        background: #374151;
         padding: 12px;
         font-weight: 600;
         margin-top: 20px;
         }
-      }
+
     .modal-content button { margin-top: 16px; padding: 8px 16px; border: none; background: #2563eb; color: white; border-radius: 6px; cursor: pointer; }
     .info-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
     .contact-link { text-decoration: underline; cursor: pointer; font-weight: 600; color: #2563eb; }
@@ -390,6 +390,11 @@ body.dark-mode .dark-mode-btn {
 <div class="info-row">
   <div id="update-info" style="font-size:13px;color:#666;">데이터 기준일: -</div>
 
+  <label>
+      <input type="checkbox" id="hideZeroQty">
+      재고 0개 숨기기
+  </label>
+
   <div class="sort-box">
     <select id="sortSelect">
       <option value="">정렬 없음</option>
@@ -525,10 +530,28 @@ fetch("stock.csv?v=" + new Date().getTime())
   });
 
 function updateView() {
-  renderTable();
-  renderPagination();
-  renderResultInfo();
-  renderMobileList();
+    const hideZero = document.getElementById("hideZeroQty").checked;
+
+    if (hideZero) {
+        // 현재 검색 결과 중 수량 0개 제외
+        const baseRows = filteredRows;
+
+        filteredRows = baseRows.filter(row => {
+            return Number(String(row.qty).replace(/[^0-9.-]/g, "")) > 0;
+        });
+
+        renderTable();
+        renderPagination();
+        renderResultInfo();
+        renderMobileList();
+
+        filteredRows = baseRows;
+    } else {
+        renderTable();
+        renderPagination();
+        renderResultInfo();
+        renderMobileList();
+    }
 }
 
 function renderTable() {
@@ -801,6 +824,11 @@ darkModeBtn.addEventListener("click", function() {
     }
 });
 
+
+document.getElementById("hideZeroQty").addEventListener("change", function() {
+    currentPage = 1;
+    updateView();
+});
 
 </script>
 </body>
