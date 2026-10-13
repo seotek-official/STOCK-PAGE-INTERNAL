@@ -1,11 +1,11 @@
-﻿"""#DATE=2026-10-06 18:00:00 AM""",,,,
+﻿"""#DATE=2026-10-13 17:00:00 PM""",,,,
 Description,MLFB,type,location,qty
-"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,32
-"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,42
-"SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,LG,A1,225
+"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 50 units",6GK1901-1BB10-2AE0,LG,A1,29
+"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector ",6GK1901-1BB10-2AA0,LG,A1,2
+"SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,LG,A1,221
 "SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2D, BU type A0, push-in terminals, without aux. terminals, new load group, WxH: 15x 117 mm
-",6ES7193-6BP00-0DA0,LG,A2,32
-"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,207
+",6ES7193-6BP00-0DA0,LG,A2,14
+"SIMATIC ET 200SP, BaseUnit BU15-P16+A0+2B, BU type A0, Push-in terminals, without AUX terminals, bridged to the left, WxH: 15x 117 mm",6ES7193-6BP00-0BA0,LG,A2,133
 "SIMATIC ET 200SP, BaseUnit BU20-P12+A0+4B, BU type B1, Packing unit: 1 unit, push-in terminals, without auxiliary terminals, bridged to the left, WxH: 20 mm x 117 mm",6ES7193-6BP20-0BB1,LG,A2,42
 "SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with 1.5 MB work memory for program and 4.5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 6 ns bit performance, SIMATIC Memory Card required *** approvals and certificates according to entry 109817466 at to be considered! ***",6ES7515-2FN03-0AB0,LG,A3,0
 "*** spare part *** SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with work memory 750 KB for program and 3 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 30 ns bit performance, SIMATIC Memory Card required",6ES7515-2FM02-0AB0,LG,A3,2
@@ -42,14 +42,14 @@ SINAMICS SHIELD CONNECTION SHEET FOR 100mm45A/60A MOTOR MODULES INTERNAL AIR COO
 "SIMATIC HMI connecting cable for KTPX00(F) Mobile, length 5 m",6AV2181-5AF05-0AX0,LG,A4,0
 "SINAMICS S120 SMART LINE MODULE INPUT: 3AC 380-480V, 50/60HZ OUTPUT: DC 600V, 90A",6SL3130-6TE25-5AA3,LG,A4,1
 SINAMICS SMC30 Sensor Module For incremental encoder: TTL/HTL or combi-encoder SSI with incremental tracks or encoder SSI without incremental signals/ without DRIVE-CLiQ cable 30 mm overall width,6SL3055-0AA00-5CA2,LG,B1,20
-"SIMATIC ET 200SP, BusAdapter BA 2xRJ45, 2 RJ45 sockets",6ES7193-6AR00-0AA0,LG,B1,9
+"SIMATIC ET 200SP, BusAdapter BA 2xRJ45, 2 RJ45 sockets",6ES7193-6AR00-0AA0,LG,B1,13
 "SIMATIC ET 200SP, Digital input module, DI 16x 24V DC Standard, type 3 (IEC 61131), sink input, (PNP, P-reading), Packing unit: 1 Piece, fits to BU-type A0, Colour Code CC00, input delay time 0,05..20ms, diagnostics wire break, diagnostics supply voltage",6ES7131-6BH01-0BA0,LG,B1,0
 "SIMATIC ET 200SP, Digital output module, DQ 16x 24V DC/0,5A Standard, Source output (PNP,P-switching) Packing unit: 1 piece, fits to BU-type A0, Colour Code CC00, substitute value output, module diagnostics for: short-circuit to L+ and ground, wire break, supply voltage",6ES7132-6BH01-0BA0,LG,B1,191
 "plastic mounting clips for TD 17, OP 7, OP 17, OP 73, OP 77A/B, TP/OP 17X except TP 177 4"",pushbutton panel, Key Panel, empty front design, KP300 Basic mono, Basic Panels 2nd generation, KTP400 Comfort, USB hub, sheet thickness 2 ... 6 mm, scope of supply: 20 mounting clips including screws",6AV6671-8XK00-0AX2,SFA,B2,16
-"SIMATIC ET 200SP, Digital input module, DI 16x 24V DC Standard",6ES7131-6BH01-0BA0,SFA,B2,38
+"SIMATIC ET 200SP, Digital input module, DI 16x 24V DC Standard",6ES7131-6BH01-0BA0,SFA,B2,4
 "SIMATIC ET 200SP, Digital output module, DQ 16x 24V DC/0,5A Standard",6ES7132-6BH01-0BA0,SFA,B2,3
 "SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XU/I 2-WIRE STANDARD",6ES7134-6HD01-0BA1,SFA,B2,0
-"SIMATIC ET 200SP, Analog output module, AQ 4XU/I Standard",6ES7135-6HD00-0BA1,SFA,B2,1
+"SIMATIC ET 200SP, Analog output module, AQ 4XU/I Standard",6ES7135-6HD00-0BA1,SFA,B2,0
 "SIMATIC DP, electronic module for ET 200SP, F-DI 8x 24 V DC HF",6ES7136-6BA01-0CA0,SFA,B2,0
 "SIMATIC DP, electronic module ET 200SP, F-DQ 8x24VDC/0.5A",6ES7136-6DC00-0CA0,SFA,B2,0
 "SIMATIC ET 200SP, CM PTP communication module",6ES7137-6AA01-0BA0,SFA,B2,0
@@ -140,7 +140,7 @@ SINAMICS G120 CONTROL UNIT CU240E-2 PN E-TYPE,6SL3244-0BB12-1FA0,한화,C3,2
 "IWLAN client, SCALANCE W734-1, RJ45, 1 radio, 2 R-SMA antenna port, iFeatures support via KEY-PLUG, IEEE 802.11a/b/g/h/n, 2.4/5 GHz, gross data rate 300 Mbps, 2x RJ45 max. 100 Mbps, PoE integrated 2-port switch, redundant 24 V DC, joint block, IP30, -20... 60 °C, plug slot WPA2/802.11i/e, observe national approvals! CERT ID: MSN-W1-RJ-E2, scope of supply: manuals on CD-ROM, German/English, 1x joint block; for operation outside of USA/Israel ..",6GK5734-1FX00-0AA0,한화,C3,1
 "IWLAN access point, SCALANCE W774-1 RJ45, 1 radio, 2 R-SMA antenna port, iFeatures support via KEY-PLUG, IEEE 802.11a/b/g/h/n, 2.4/5 GHz, gross data rate 300 Mbps, 2x RJ45 max. 100 Mbps, PoE integrated 2-port switch, redundant 24 V DC, joint block, IP30, -20... 60 °C, plug slot WPA2/802.11i/e, observe national approvals! CERT ID: MSN-W1-RJ-E2, scope of supply: manuals on CD-ROM, German/English, 1x joint block; for operation outside of USA/Israel ..",6GK5774-1FX00-0AA0,한화,C3,1
 "Compact Switch Module CSM 1277 for connecting SIMATIC S7-1200 and up to 3 further nodes to Industrial Ethernet with 10/100 Mbit/s; unmanaged switch, 4 RJ45 ports, ext. 24 V DC power supply LED diagnostics, S7-1200 module incl. electronic Equipment Manual on CD-ROM.",6GK7277-1AA10-0AA0,한화,C3,10
-"SIMATIC S7-1500, mounting rail 482.6 mm",6ES7590-1AE80-0AA0,한화,C4,8
+"SIMATIC S7-1500, mounting rail 482.6 mm",6ES7590-1AE80-0AA0,한화,C4,5
 SINAMICS G120D Power Module PM250D with integrated Class A filter capable of energy recovery. 380-480 V 3 AC+10/-10% 47-63Hz Power high overload: 1.5kW,6SL3525-0PE21-5AA1,한화,C4,3
 SINAMICS BRAKING RESISTOR R=75Ohm P_rated=375W P_max=7500W/12s/5% duty STANDALONE,6SL3201-0BE21-8AA0,한화,C4,1
 "connection cable PN for KTPX00(F) Mobile (PROFINET) length: 10 m, scope of supply: 1 connection cable",6AV2181-5AF10-0AX0,북미,D1,4
@@ -167,12 +167,12 @@ SINAMICS G120 Basic Operator Panel (BOP-2),6SL3255-0AA00-4CA1,화인,D1,0
 "SIMATIC HMI MTP1200, Unified Comfort Panel, touch operation, 12.1"" widescreen TFT display, 16 million colors, PROFINET interface, configurable as of WinCC Unified Comfort V16, contains open-source software, which is provided free of charge see enclosed DVD",6AV2128-3MB06-0AX1,로버스텍,D2,0
 "SIMATIC ET 200SP, digital output module DQ 4x24 V DC/2 A standard, source output (PNP,sourcing output) packing unit: 1 unit, suitable for BU type A0, color code CC02, substitute value output, module diagnostics for: short circuit to L+ and M, wire break, supply voltage",6ES7132-6BD21-0BA0,동명,D3,0
 "SIMATIC ET 200SP, Analog input module, AI 4xRTD/TC High Feature, suitable for BU type A0, A1, Color code CC00, channel diagnostics, 16 bit, +/-0.1%, 2-/3-/4-wire
-",6ES7134-6JD00-0CA1,동명,D3,2
+",6ES7134-6JD00-0CA1,동명,D3,0
 "SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XU/I 2-WIRE STANDARD, PACKING UNIT: 1 PIECE, FITS TO BU-TYPE A0, A1, COLOR CODE CC03, MODULE DIAGNOSIS, 16BIT, +/-0,3%",6ES7134-6HD01-0BA1,동명,D3,0
 "SIMATIC PN/PN Coupler for deterministic data exchange between max.4 PN-Controller per subnet, also from subnet to subnet, PROFIsafe data exchange, I/O-, MSI-, MSO- and data record communication, redundant power supply, PN-connection via SIMATIC BusAdapter (BA), delivery w/o BusAdapter",6ES7158-3AD10-0XA0,동명,D3,1
-"SIMATIC S7, memory cards for S7-1x00 CPU/SINAMICS, 3, 3V Flash, 24 MB",6ES7954-8LF04-0AA0,KTE,D3,1
-"SIMATIC S7-1500, CPU 1513-1 PN, central processing unit with work memory 600 KB for program and 2.5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 6 ns bit performance, SIMATIC Memory Card required",6ES7513-1AM03-0AB0,KTE,D3,1
-"SIMATIC S7-1500, digital output module DQ 32x24V DC/0.5A HF; 32 channels in groups of 8; 4 A per group; single-channel diagnostics; substitute value, switching cycle counter for connected actuators. the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. front connector (screw terminals or push-in) to be ordered separately",6ES7522-1BL01-0AB0,KTE,D3,4
+"SIMATIC S7, memory cards for S7-1x00 CPU/SINAMICS, 3, 3V Flash, 24 MB",6ES7954-8LF04-0AA0,KTE,D3,0
+"SIMATIC S7-1500, CPU 1513-1 PN, central processing unit with work memory 600 KB for program and 2.5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 6 ns bit performance, SIMATIC Memory Card required",6ES7513-1AM03-0AB0,KTE,D3,0
+"SIMATIC S7-1500, digital output module DQ 32x24V DC/0.5A HF; 32 channels in groups of 8; 4 A per group; single-channel diagnostics; substitute value, switching cycle counter for connected actuators. the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. front connector (screw terminals or push-in) to be ordered separately",6ES7522-1BL01-0AB0,KTE,D3,2
 "SIMATIC HMI TP1200 Comfort, Comfort Panel, touch operation, 12"" widescreen TFT display, 16 million colors, PROFINET interface, MPI/PROFIBUS DP interface, 12 MB configuration memory, Windows CE 6.0, configurable from WinCC Comfort V11",6AV2124-0MC01-0AX0  ,일반,E1,0
 SINAMICS S210 input voltage: 200-480 V 3AC; -10%/+10%; 1.6 A; 45-66 Hz; output voltage: 0-input V 1.2 A; 0-550 Hz; motor: 0.4 kW; degree of protection: IP20; frame size A; 50 x 270 x 220 (WxHxD),6SL3210-5HE10-4UF0,일반,E1,2
 SINAMICS S210 input voltage: 200-480 V 3AC -10%/+10% 2.8 A ,6SL3210-5HE10-8UF0,일반,E1,1
@@ -192,14 +192,15 @@ SINAMICS S210 input voltage 200-480 V 3AC -10%/+10% 7.5 A 45-66 Hz output voltag
 "SIMATIC DP, CPU 1510SP-1 PN for ET 200SP, Central processing unit with Work memory 100 KB for program and 750 KB for data, 1st interface: PROFINET IRT with 3-port switch, 72 ns bit performance, SIMATIC Memory Card required, BusAdapter required for Port 1 and 2",6ES7510-1DJ01-0AB0,일반,E2,1
 "*** spare part *** SIMATIC DP, CPU 1512SP-1 PN for ET 200SP, central processing unit with work memory 200 KB for program and 1 MB for data, 1st interface: PROFINET IRT with 3-port switch, 48 ns bit performance, SIMATIC Memory Card required, BusAdapter required for port 1 and 2",6ES7512-1DK01-0AB0,일반,E2,1
 "SIMATIC S7-1500, CPU 1513-1 PN, central processing unit with working memory 300 KB for program and 1.5 MB for data, 1. interface: PROFINET IRT with 2 port switch, 40 NS bit-performance, SIMATIC memory card necessary",6ES7513-1AL02-0AB0,일반,E2,1
-"SIMATIC S7-1500, CPU 1513-1 PN, central processing unit with work memory 600 KB for program and 2.5 MB for data,",6ES7513-1AM03-0AB0,일반,E2,0
+"SIMATIC S7-1500, CPU 1513-1 PN, central processing unit with work memory 600 KB for program and 2.5 MB for data,",6ES7513-1AM03-0AB0,일반,E2,2
 "SIMATIC S7-1500, CPU 1515-2 PN",6ES7515-2AN03-0AB0,일반,E2,0
 "*** spare part *** SIMATIC S7-1500F, CPU 1515F-2 PN, central processing unit with work memory 750 KB for program and 3 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 30 ns bit performance, SIMATIC Memory Card required",6ES7515-2FM02-0AB0,일반,E2,0
 "*** spare part *** SIMATIC S7-1500T, CPU 1515TF-2 PN, central processing unit with work memory 750 KB for program and 3 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface, Ethernet, 30 ns bit performance, SIMATIC Memory Card required",6ES7515-2UM01-0AB0,일반,E2,1
 "SIMATIC S7-1500F, CPU 1516F-3 PN/DP, central processing unit with 1.5 MB work memory for program and 5 MB for data, 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 3rd interface: PROFIBUS, 10 ns bit performance, SIMATIC Memory Card required",6ES7516-3FN02-0AB0,일반,E2,0
 "SIMATIC S7-1500F, CPU 1516F-3 PN/DP, central processing unit with work memory 3 MB for program and 7.5 MB for data 1st interface: PROFINET IRT with 2-port switch, 2nd interface: PROFINET RT, 3rd interface: PROFIBUS, 6 ns bit performance, SIMATIC Memory Card required ****approvals and certificates according to entry 109817466 at support.industry.siemens.com to be considered! - -
 ",6ES7516-3FP03-0AB0,일반,E2,0
-"SIMATIC S7-1500, digital input module DI 32x24 V DC HF, 32 channels in groups of 16; of which 2 inputs as counters can be used; input delay 0.05..20 ms input type 3 (IEC 61131); diagnostics; hardware interrupts: front connector (screw terminals or push-in) to be ordered separately",6ES7521-1BL00-0AB0,일반,E2,5
+"SIMATIC S7-1500, digital input module DI 32x24 V DC HF, 32 channels in groups of 16; of which 2 inputs as counters can be used; input delay 0.05..20 ms input type 3 (IEC 61131); diagnostics; hardware interrupts: front connector (screw terminals or push-in) to be ordered separately",6ES7521-1BL00-0AB0,일반,E2,3
+"SIMATIC S7-1500, digital input module DI 16x24 V DC HF, 16 channels in groups of 16; of which 2 inputs as counters can be used; input delay 0.05..20 ms; input type 3 (IEC 61131); diagnostics; hardware interrupts: front connector (screw terminals or push-in) to be ordered separately",6ES7521-1BH00-0AB0,일반,E2,8
 "communications processor CP 1543-1 for connection of SIMATIC S7-1500 to Industrial Ethernet; TCP/IP, ISO, UDP, S7 communication, IP broadcast/ multicast, security (VPN, firewall), diagnostics, SNMPv1/v3, DHCP, FTP client/server, email, IPv4/IPv6, IEEE 802.1X (radius), time synchronization via NTP, 1x RJ45 (10/100/1000 Mbps).",6GK7543-1AX10-0XE0,일반,E2,1
 "SIMATIC S7, memory card for S7-400, long design, 5V Flash EPROM, 1 Mbyte",6ES7952-1KK00-0AA0,일반,E2,0
 "SIMATIC S7, MEMORY CARD FOR S7-1X00 CPU, 3,3 V FLASH, 256 MBYTE",6ES7954-8LL03-0AA0,일반,E2,0
@@ -209,24 +210,25 @@ SINAMICS S210 input voltage 200-480 V 3AC -10%/+10% 7.5 A 45-66 Hz output voltag
 "SIMATIC S7, memory cards for S7-1x 00 CPU, 3, 3V Flash, 2 GB",6ES7954-8LP04-0AA0,일반,E2,0
 "SIMATIC S7, Micro Memory Card for S7-300/C7/ET 200, 3, 3V Nflash, 64 KB",6ES7953-8LF31-0AA0,일반,E2,0
 "SIMATIC S7, Micro Memory Card for S7-300/C7/ET 200, 3, 3V Nflash, 512 KB",6ES7953-8LJ30-0AA0,일반,E2,1
-"SIMATIC S7, MEMORY CARD FOR S7-1X00 CPU/SINAMICS, 3,3 V FLASH, 24 MBYTE",6ES7954-8LF04-0AA0,일반,E2,0
+"SIMATIC S7, MEMORY CARD FOR S7-1X00 CPU/SINAMICS, 3,3 V FLASH, 24 MBYTE",6ES7954-8LF04-0AA0,일반,E2,2
 "SIMATIC S7, memory cards for S7-1x00 CPU/SINAMICS, 3, 3V Flash, 12 MB
 ",6ES7954-8LE04-0AA0,일반,E2,0
 "FRONT CONNECTOR F. SM,48PIN,SPRING CONT.",6ES7492-1BL00-0AA0,일반,E2,32
 "SIMATIC S7-1500, mounting rail 160 mm",6ES7590-1AB60-0AA0,일반,E2,0
 "SIMATIC S7-1500, mounting rail 245 mm (approx. 9.6 inch); incl. grounding screw, integrated DIN rail for mounting of incidentals such as terminals, automatic circuit breakers and relays",6ES7590-1AC40-0AA0,일반,E2,0
-"SIMATIC S7-1500, System power supply PS 25W 24 V DC, supplies the backplane bus of the S7-1500 with operating voltage",6ES7505-0KA00-0AB0,일반,E2,0
+"SIMATIC S7-1500, System power supply PS 25W 24 V DC, supplies the backplane bus of the S7-1500 with operating voltage",6ES7505-0KA00-0AB0,일반,E2,1
 "SIMATIC S7-1500 Digital input module, DI 32x24 V DC BA, 32 channels in groups of 16, Input delay typ. 3.2 ms, Input type 3 (IEC 61131); Delivery incl. front connector Push-in",6ES7521-1BL10-0AA0,일반,E2,0
 "SIMATIC S7-1500, digital output module, DQ32xDC 24V/0.5A BA, 32 channels in groups of 8, 4 A per group; the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. delivery incl. front connector push-in",6ES7522-1BL10-0AA0,일반,E2,3
 "SIMATIC S7-1500, digital output module DQ16x24 V DC/0.5A HF; 16 channels in groups of 8; 4 A per group; single-channel diagnostics; substitute value: switching cycle counter for connected actuators. the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. front connector (screw terminals or push-in) to be ordered separately",6ES7522-1BH01-0AB0,일반,E2,2
-"SIMATIC S7-1500, analog output module AQ8xU/I HS, 16-bit resolution accuracy 0.3%, 8 channels in groups of 8, diagnostics; substitute value 8 channels in 0.125 ms oversampling; the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. delivery including infeed element, shielding bracket and shield terminal: front connector (screw terminals or push-in) to be ordered separately",6ES7532-5HF00-0AB0,일반,E2,2
+"SIMATIC S7-1500, analog output module AQ8xU/I HS, 16-bit resolution accuracy 0.3%, 8 channels in groups of 8, diagnostics; substitute value 8 channels in 0.125 ms oversampling; the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. delivery including infeed element, shielding bracket and shield terminal: front connector (screw terminals or push-in) to be ordered separately",6ES7532-5HF00-0AB0,일반,E2,1
 "SIMATIC S7-1500, analog output module AQ 4xU/I ST, 16-bit resolution accuracy 0.3%. 4 channels in groups of 4, diagnostics;",6ES7532-5HD00-0AB0,일반,E2,0
 "SIMATIC S7-1500, F digital output module, F-DQ 8x 24 V DC 2A PPM PROFIsafe; 35 mm width; up to PL E (ISO 13849-1)/ SIL3 (IEC 61508)",6ES7526-2BF00-0AB0,일반,E2,1
 "SIMATIC S7-1500, digital output module DQ 16x 230V AC/2A ST; relay 16 channels in groups of 2; 4 A per group; switching cycle counter for integrated relay, diagnostics; substitute value: the module supports the safety-oriented shutdown of load groups up to SIL1 according to EN IEC 62061:2021 and Category 2 / PL c according to EN ISO 13849-1:2015. front connector (screw terminals or push-in) to be ordered separately",6ES7522-5HH00-0AB0,일반,E2,1
 "SIMATIC S7-1500, digital output module DQ 32x24V DC/0.5A HF; 32 channels in groups of 8; 4 A per group; single-channel diagnostics; substitute value, switching cycle counter for connected actuators. the module supports the safety-oriented shutdown of load groups up to SIL2 according to EN IEC 62061:2021 and Category 3 / PL d according to EN ISO 13849-1:2015. front connector (screw terminals or push-in) to be ordered separately",6ES7522-1BL01-0AB0,일반,E2,1
-"SIMATIC S7-1500, Front connector Screw-type connection system",6ES7592-1AM00-0XB0,일반,E2,12
-"SIMATIC S7-1500, Front connector in push-in design, 40-pole, for 35 mm wide modules incl. 4 potential bridges and cable ties",6ES7592-1BM00-0XB0,일반,E2,9
+"SIMATIC S7-1500, Front connector Screw-type connection system",6ES7592-1AM00-0XB0,일반,E2,22
+"SIMATIC S7-1500, Front connector in push-in design, 40-pole, for 35 mm wide modules incl. 4 potential bridges and cable ties",6ES7592-1BM00-0XB0,일반,E2,8
 "SIMATIC S7-1500 analog input module AI 8xU/I/RTD/TC ST, 16 bit resolution, accuracy 0.3%, 8 channels in groups of 8; 4 channels for RTD measurement, common mode voltage 10 V; Diagnostics; Hardware interrupts; Delivery including infeed element, shield bracket and shield terminal: Front connector (screw terminals or push-in) to be ordered separately",6ES7531-7KF00-0AB0,일반,E2,0
+"SIMATIC S7-1500 analog input module AI 8xU/I HF, up to 24 bit resolution, accuracy 0.1%, 8 channels in groups of 1; common mode voltage: 30 V AC/60 V DC, Diagnostics; Hardware interrupts Measured values ​​scalable, measuring range adjustment, Calibrate in RUN; Delivery including infeed element, shield bracket and shield terminal: Front connector (screw terminals or push-in) to be ordered separately",6ES7531-7NF00-0AB0,일반,E2,1
 "SIMATIC SD memory card 2 GB Secure Digital Card for For devices with corresponding Slot Further information, Quantity and content: see technical data",6AV2181-8XP00-0AX0,일반,E2,0
 "SIMATIC DP, electronic module for ET 200SP, F-DI 8x 24 V DC HF,",6ES7136-6BA01-0CA0,일반,E2,0
 "SIMATIC DP, Electronic modules for ET 200 PRO 8 DI 24 V DC High Feature, Channel diagnostics; short-circuit and wire break; incl. bus module, Connection module IO 6ES7194-4..00-0AA0 order separately",6ES7141-4BF00-0AB0,일반,E2,1
@@ -237,10 +239,11 @@ SIMATIC ET 200MP. PROFIBUS connection IM 155-5 DP ST for max,6ES7155-5BA00-0AB0,
 "SIMATIC ET 200SP, PROFINET bundle IM, IM 155-6PN ST",6ES7155-6AA01-0BN0,일반,E2,0
 "*** Spare part *** SIMATIC DP, PN/PN coupler Coupling module for connecting two PROFINET networks Transmission via PROFIsafe Redundant current infeed",6ES7158-3AD01-0XA0,일반,E2,0
 "SIMATIC PN/PN Coupler for deterministic data exchange between max.4 PN-Controller per subnet, also from subnet to subnet, PROFIsafe data exchange, I/O-, MSI-, MSO- and data record communication, redundant power supply, PN-connection via SIMATIC BusAdapter (BA), delivery w/o BusAdapter",6ES7158-3AD10-0XA0,일반,E2,0
+"SIMATIC DP, DP/DP coupler coupling module for connecting two PROFIBUS DP networks redundant current infeed; product phase-out planned – see SIOS 109989704",6ES7158-0AD01-0XA0,일반,E2,4
 "SCALANCE XC108, Unmanaged IE switch, 8x 10/100 Mbit/s RJ45 ports, LED diagnostics, error-signaling contact with set pushbutton, redundant power supply Manual available as a download .",6GK5108-0BA00-2AC2,일반,E2,0
 "communications module CM 1542-1 for connection of S7-1500 to PROFINET as IO Controller or IO Device: TCP/IP, ISO-on-TCP, UDP, S7 communication, IP broadcast multicast, SNMPV1, time-of-day synchronization via NTP, 2xRJ45 (10/100 Mbit).",6GK7542-1AX00-0XE0,일반,E2,0
-"communications module CM 1542-1 for connection of S7-1500 to PROFINET as IO Controller or IO Device: TCP/IP, ISO-on-TCP, UDP, S7 communication, IP broadcast multicast, SNMPV1, time-of-day synchronization via NTP, 2xRJ45 (10/100 Mbit).",6GK7542-1AX10-0XE0,일반,E2,0
-SIMATIC ET 200SP PS 24V/5A Stabilized power supply Input,6EP7133-6AB00-0BN0,일반,E2,1
+"communications module CM 1542-1 for connection of S7-1500 to PROFINET as IO Controller or IO Device: TCP/IP, ISO-on-TCP, UDP, S7 communication, IP broadcast multicast, SNMPV1, time-of-day synchronization via NTP, 2xRJ45 (10/100 Mbit).",6GK7542-1AX10-0XE0,일반,E2,2
+SIMATIC ET 200SP PS 24V/5A Stabilized power supply Input,6EP7133-6AB00-0BN0,일반,E2,0
 "SIMATIC S7, Digital output SM 326, F-DO 8x24 V DC/2A PM fail-safe digital output Switching to P-M potential up to Category 4 (EN 954-1)/ SIL3 (IEC61508)/PLE (ISO13849), 1x 40-pole",6ES7326-2BF41-0AB0,일반,E2,1
 "SIMATIC S7-300, Digital input SM 321, Isolated 32 DI, 24 V DC, 1x 40-pole",6ES7321-1BL00-0AA0,일반,E2,0
 "SIMATIC S7-300, Analog input SM 331, isolated, 8 AI,",6ES7331-7KF02-0AB0,일반,E2,2
@@ -249,7 +252,7 @@ SIMATIC ET 200SP PS 24V/5A Stabilized power supply Input,6EP7133-6AB00-0BN0,일�
 "SIMATIC DP, Electronic module for ET 200 PRO 8 DI 24 V DC, Module diagnostics; incl. bus module, Connection module IO 6ES7194-4..00-0AA0 order separately",6ES7141-4BF00-0AA0,일반,E2,1
 "SIMATIC S7-400, Backup battery 3.6 V/2.3 AH for PS 405 4 A/10 A/20 A and PS 407 4 A/10 A/20 A",6ES7971-0BA00,일반,E2,0
 "*** spare part *** SIMATIC DP, connection IM 153-1, for ET 200M, for max. 8 S7-300 modules",6ES7153-1AA03-0XB0 ,일반,E3,0
-"SIMATIC PM 1507 24 V/3 A Stabilized power supply for SIMATIC S7-1500 input: 120/230 V AC, output: 24 V DC/3 A",6EP1332-4BA00,일반,E3,0
+"SIMATIC PM 1507 24 V/3 A Stabilized power supply for SIMATIC S7-1500 input: 120/230 V AC, output: 24 V DC/3 A",6EP1332-4BA00,일반,E3,2
 "SIMATIC S7-1500, System power supply PS 60W 24/48/60 V DC, supplies the backplane bus of the S7-1500 with operating voltage",6ES7505-0RA00-0AB0,일반,E3,1
 "***spare part*** SIMATIC S7-1500, CPU 1511-1 PN, central processing unit with work memory 150 KB for program and 1 MB for data, 1st interface: PROFINET IRT with 2-port switch, 60 ns bit performance, SIMATIC Memory Card required",6ES7511-1AK02-0AB0,일반,E3,0
 "IWLAN client, SCALANCE W722-1, RJ45, 1 radio, 1 R-SMA antenna port, iFeatures support IEEE 802.11a/b/g/h/n, 2.4/5GHz, gross data rate 150 Mbit/s, 1x RJ45 max. 100 Mbit/s, 24 V DC, joint block, IP20, 0... +55 °C, WPA2/802.11i/e, observe national approvals! CERT ID: ELN-W1-RJ-E1, scope of delivery: Manuals on CD-ROM, German/English, 1x joint block; for operation outside of USA/Israel",6GK5722-1FC00-0AA0,일반,E3,2
@@ -272,7 +275,8 @@ SCALANCE XC208G PoE Manageable Layer 2 IE PoE Switch,6GK5208-0RA00-2AC2,일반,E
 SCALANCE XC208 manageable Layer 2 IE switch,6GK5208-0BA00-2AC2,일반,E4,0
 "SIMATIC S7-1500, mounting rail 482.6 mm",6ES7590-1AE80-0AA0,일반,E4,2
 "SIMATIC S7-300, mounting rail, length: 482.6 mm",6ES7390-1AE80-0AA0,일반,E4,4
-"SIMATIC S7-1500, mounting rail 245 mm (approx. 9.6 inch); incl. grounding screw, integrated DIN rail for mounting of incidentals such as terminals, automatic circuit breakers and relays",6ES7590-1AC40-0AA0,일반,E4,2
+"SIMATIC S7-1500, mounting rail 245 mm (approx. 9.6 inch); incl. grounding screw, integrated DIN rail for mounting of incidentals such as terminals, automatic circuit breakers and relays",6ES7590-1AC40-0AA0,일반,E4,1
+"SIMATIC S7-1500, mounting rail 530 mm (approx. 20.9 inch); incl. grounding screw, integrated DIN rail for mounting of incidentals such as terminals, automatic circuit breakers and relays",6ES7590-1AF30-0AA0,일반,E4,1
 "SIMATIC S7-1500, mounting rail 830 mm (approx. 32.7 inch); incl. grounding screw, integrated DIN rail for mounting of incidentals such as terminals, automatic circuit breakers and relays",6ES7590-1AJ30-0AA0,일반,E4,1
 "SINUMERIK operator panel front OP 012, 12.1"" with membrane keys and mouse",6FC5203-0AF02-0AA1,일반,E4,1
 "SIMATIC, Standard mounting rail 35mm, Length 530 mm for 600 mm cabinets",6ES5710-8MA21,일반,E4,1
@@ -331,10 +335,10 @@ SINAMICS / SIMOTION TERMINAL BOARD TB30 FOR CONTROL UNIT CU320-X AND SIMOTION D4
 "SIMATIC ET 200SP, digital output module, DQ 4x 24VDC/2A Standard, suitable for BU type A0, Color code CC02, Module diagnostics",6ES7132-6BD20-0BA0,일반,F2,6
 "SIMATIC ET 200SP, Digital output module, DQ 8x 24V DC/0,5A Basic",6ES7132-6BF01-0AA0,일반,F2,6
 "SIMATIC ET 200SP, Digital output module, DQ 8x 24V DC/0,5A Standard",6ES7132-6BF01-0BA0,일반,F2,5
-"SIMATIC ET 200SP, Digital output module, DQ 16x 24V DC/0,5A Standard, Source output (PNP,P-switching) Packing unit: 1 piece, fits to BU-type A0, Colour Code CC00, substitute value output, module diagnostics for: short-circuit to L+ and ground, wire break, supply voltage",6ES7132-6BH01-0BA0,일반,F2,182
+"SIMATIC ET 200SP, Digital output module, DQ 16x 24V DC/0,5A Standard, Source output (PNP,P-switching) Packing unit: 1 piece, fits to BU-type A0, Colour Code CC00, substitute value output, module diagnostics for: short-circuit to L+ and ground, wire break, supply voltage",6ES7132-6BH01-0BA0,일반,F2,170
 "SIMATIC ET 200SP, Relay module, RQ NO 4x 120V DC..230VAC/5A ST. 4 normally open contacts, isolated contacts, packing unit: 1 piece, fits to BU-type B0 and B1, Colour Code CC40, substitute value output, module diagnostics for: supply voltage",6ES7132-6HD01-0BB1,일반,F2,0
 "SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XI 2-/4-WIRE STANDARD, PACKING UNIT: 1 PIECE, FITS TO BU-TYPE A0, A1, COLOR CODE CC03, MODULE DIAGNOSIS, 16BIT, +/-0,3%",6ES7134-6GD01-0BA1,일반,F2,0
-"SIMATIC ET 200SP, Analog input module, AI 8XI 2-/4-wire Basic",6ES7134-6GF00-0AA1,일반,F2,1
+"SIMATIC ET 200SP, Analog input module, AI 8XI 2-/4-wire Basic",6ES7134-6GF00-0AA1,일반,F2,0
 "SIMATIC ET 200SP, Analog input module, AI 2x U/I 2-.4-wire High Feat., suitable for BU type A0, A1, Color code CC05, channel diagnostics, 16 bit, +/-0.1%",6ES7134-6HB00-0CA1,일반,F2,14
 "SIMATIC ET 200SP, Analog input module, AI 2x U/I 2-.4-wire High Speed, suitable for BU type A0, A1, Color code CC00, channel diagnostics, 16 bit, +/-0.3%",6ES7134-6HB00-0DA1,일반,F2,6
 "SIMATIC ET 200SP, ANALOG INPUT MODULE, AI 4XU/I 2-WIRE STANDARD, PACKING UNIT: 1 PIECE, FITS TO BU-TYPE A0, A1, COLOR CODE CC03, MODULE DIAGNOSIS, 16BIT, +/-0,3%",6ES7134-6HD01-0BA1,일반,F2,0
@@ -440,7 +444,7 @@ SINAMICS TERMINAL MODULE TM31 ADD ON BOARD FOR SINAMICS WITH DIGITAL AND ANALOG 
 "*** spare part *** SIMATIC ET 200MP. PROFINET IO device interface module IM 155-5 PN HF, for ET 200MP electronic modules; up to 12 IO modules without PS; up to 30 IO modules with additional PS; integrated 2-port switch; RJ45 shared device; MRP; IRT >=0.25 ms; isochronous mode firmware update; I&M0...3; prioritized startup, S2 redundancy; shared device with 4 controllers suitable for operation with the active backplane bus (FW V4.4 or higher)",6ES7155-5AA00-0AC0,MTS,H2,1
 "SIMATIC ET 200SP, PROFINET bundle IM, IM 155-6PN ST, max. 32 I/O modules and 16 ET 200AL modules, single hot swap, bundle consists of: Interface module (6ES7155-6AU01-0BN0), Server module (6ES7193-6PA00-0AA0), BusAdapter BA 2xRJ45 (6ES7193-6AR00-0AA0)",6ES7155-6AA01-0BN0,MTS,H2,6
 "SIMATIC ET 200SP, PROFINET interface module IM155-6PN High Speed max. 30 I/O modules, 0.125 ms isochronous mode Multi-hotswap, incl. server module",6ES7155-6AU00-0DN0,MTS,H2,2
-"SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,MTS,H2,6
+"SIMATIC ET 200SP, PROFINET, 2-port interface module IM 155-6PN/2 High Feature, 1 slot for BusAdapter, max. 64 I/O modules and 16 ET 200AL modules, S2 redundancy, multi-hotswap, 0.25 ms, isochronous mode, optional PN strain relief, including server module",6ES7155-6AU01-0CN0,MTS,H2,4
 "SIMATIC DP, DP/DP coupler coupling module for connecting two PROFIBUS DP networks redundant current infeed; product phase-out planned – see SIOS 109989704",6ES7158-0AD01-0XA0,MTS,H2,0
 "SIMATIC ET 200SP, Analog input module, AI 8XI 2-/4-wire Basic",6ES7134-6GF00-0AA1,MTS,H2,0
 "SINAMICS S120 CompactFlash card without performance expansion incl. licensing (Certificate of License, stored on the card) V5.1 SP1",6SL3054-0FB10-1BA0-Z (6SL3074-0AA10-0AH0 3EA),MTS,H2,1
@@ -614,7 +618,7 @@ Male insert Han Q4/2 angled 4 contact pins 4 mm2 Connector set sleeve housing Po
 "AS-Interface accessory Cover M12 for module IP67 outer diameter 12 mm, without O-ring",3RX9802-0AA00,일반,M3,10
 "Female connector, 2-pin, type 1 2-pin connector, female Grid size 5.08 mm Further information, Quantity and content: see technical data Quantity: see technical data",6AV6671-8XA00-0AX0,일반,M3,26
 "SIMATIC S7-1500, spare part Potential bridges for front connector for 35 mm width IO modules; can be used for all 24 V DC modules",6ES7592-3AA00-0AA0,일반,M3,16
-"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, without PG socket 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BA52-0XA0,일반,M3,14
+"SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, without PG socket 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BA52-0XA0,일반,M3,12
 "SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, 15.8x 64x 35.6 mm (WxHxD), terminating resistor with isolating function, With PG receptacle",6ES7972-0BB12-0XA0,일반,M3,0
 "SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s with inclined cable outlet, 15.8x 54x 39.5 mm (WxHxD), terminating resistor with isolating function, With PG receptacle",6ES7972-0BB42-0XA0,일반,M3,0
 "SIMATIC DP, Connection plug for PROFIBUS up to 12 Mbit/s 90° cable outlet, Insulation displacement method FastConnect, With PG receptacle 15.8x 59x 35.6 mm (BxHxD)",6ES7972-0BB52-0XA0,일반,M3,10
@@ -625,7 +629,7 @@ PROFIBUS FC RS 485 plug 180 PROFIBUS connector,6GK1500-0FC10,일반,M3,0
 IE FC M12 plug PRO 4x 2; M12 plug-in connector,6GK1901-0DB50-6AA0,일반,M3,0
 Industrial Ethernet FastConnect M12 plug PRO 2x2 M12 plug-in connector ,6GK1901-0DB20-6AA8 ,일반,M3,0
 Industrial Ethernet FastConnect M12 plug PRO 2x2 M12 plug-in connector,6GK1901-0DB20-6AA0,일반,M3,3
-"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB10-2AA0,일반,M3,30
+"Industrial Ethernet FastConnect RJ45 plug 180 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB10-2AA0,일반,M3,40
 "Industrial Ethernet FastConnect RJ45 plug 180 4x 2, RJ45 plug-in connector (10/100/1000 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 4x 2 (AWG24); 180° cable outlet 1 pack = 1 unit.",6GK1901-1BB11-2AA0,일반,M3,67
 "Industrial Ethernet FastConnect RJ45 plug 90 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP Cable 2x 2; 90° cable outlet 1 pack=50 units.",6GK1901-1BB20-2AA0,일반,M3,5
 "Industrial Ethernet FastConnect RJ45 plug 145 2x 2, RJ45 plug-in connector (10/100 Mbit/s) with rugged metal enclosure and FC connection system, for IE FC TP cable 2x 2; 145° cable outlet 1 pack = 1 unit.",6GK1901-1BB30-0AA0,일반,M3,7
